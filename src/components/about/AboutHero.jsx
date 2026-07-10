@@ -1,70 +1,76 @@
 import React from 'react';
-import { FaGraduationCap, FaUserTie, FaLaptopCode } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function AboutHero() {
   return (
-    <section className="relative bg-slate-50 border-b border-slate-100">
-      {/* Hero Banner with Background Image */}
-      <div 
-        className="relative pt-24 pb-36 md:pt-32 md:pb-48 px-4 overflow-hidden flex items-center justify-center text-center"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-blue-950/80 backdrop-blur-[2px]"></div>
+    <section className="relative w-full font-sans overflow-hidden bg-slate-900 pt-28 lg:pt-32 flex flex-col">
+      
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" 
+          alt="Gurukul ITI Campus" 
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 sm:px-8 lg:px-12 flex-grow flex flex-col justify-center pb-12 lg:pb-16">
         
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <span className="inline-block py-1.5 px-5 rounded-full bg-blue-500/20 text-blue-200 border border-blue-400/30 font-bold text-xs sm:text-sm tracking-[0.2em] uppercase mb-4 sm:mb-6 backdrop-blur-md">
+        {/* Breadcrumbs */}
+        <div className="absolute top-0 left-6 sm:left-8 lg:left-12 flex items-center gap-2 text-white/70 text-xs sm:text-sm font-medium tracking-wide">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <span className="text-white/40">/</span>
+          <span className="text-white">About Us</span>
+        </div>
+
+        <div className="max-w-3xl mt-4 lg:mt-8">
+          <p className="text-white/80 font-bold tracking-[0.2em] text-xs sm:text-sm uppercase mb-3 sm:mb-5">
             Institute Overview
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight drop-shadow-xl">
-            Shaping the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Tech Leaders</span> of Tomorrow
+          </p>
+          
+          <h1 className="text-3xl sm:text-4xl lg:text-[4rem] font-bold text-white mb-5 lg:mb-6 leading-[1.1] tracking-tight">
+            Shaping the Tech Leaders of Tomorrow
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-blue-100 font-medium leading-relaxed drop-shadow-md max-w-3xl mx-auto px-2">
+          
+          <p className="text-white/90 text-base sm:text-lg lg:text-xl font-medium mb-8 leading-relaxed max-w-2xl">
             Blending academic rigor with practical industry experience to ensure our students are always one step ahead in the digital world.
           </p>
-        </div>
-      </div>
-
-      {/* Overlapping Stats Bar */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-16 sm:-mt-24 mb-16 sm:mb-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           
-          <div className="bg-white p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl shadow-blue-900/5 border border-slate-100 flex items-center gap-4 sm:gap-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0 shadow-inner">
-              <FaGraduationCap className="text-2xl sm:text-3xl text-blue-600" />
-            </div>
-            <div className="text-left">
-              <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-0.5 sm:mb-1">10+</h4>
-              <p className="text-slate-500 font-bold text-xs sm:text-sm uppercase tracking-wider">Years of Excellence</p>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl shadow-purple-900/5 border border-slate-100 flex items-center gap-4 sm:gap-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-purple-50 flex items-center justify-center shrink-0 shadow-inner">
-              <FaUserTie className="text-2xl sm:text-3xl text-purple-600" />
-            </div>
-            <div className="text-left">
-              <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-0.5 sm:mb-1">5000+</h4>
-              <p className="text-slate-500 font-bold text-xs sm:text-sm uppercase tracking-wider">Placed Alumni</p>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl shadow-emerald-900/5 border border-slate-100 flex items-center gap-4 sm:gap-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-emerald-50 flex items-center justify-center shrink-0 shadow-inner">
-              <FaLaptopCode className="text-2xl sm:text-3xl text-emerald-600" />
-            </div>
-            <div className="text-left">
-              <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-0.5 sm:mb-1">50+</h4>
-              <p className="text-slate-500 font-bold text-xs sm:text-sm uppercase tracking-wider">Expert Faculty</p>
-            </div>
-          </div>
-
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 font-bold text-sm sm:text-base transition-all flex items-center gap-3 shadow-lg hover:shadow-blue-600/20">
+            Explore Programs <FaArrowRight className="text-sm" />
+          </button>
         </div>
       </div>
+
+      {/* Bottom Glassmorphic Stats Bar */}
+      <div className="relative z-10 w-full flex justify-start lg:justify-end mt-auto">
+        <div className="w-full lg:w-[65%] xl:w-[55%] bg-slate-900/40 backdrop-blur-md border-t border-l-0 lg:border-l border-white/10 flex flex-col sm:flex-row">
+          
+          {/* Stat 1 */}
+          <div className="flex-1 p-5 sm:p-6 lg:py-8 border-b sm:border-b-0 sm:border-r border-white/10 text-center flex flex-col justify-center items-center hover:bg-white/5 transition-colors">
+            <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1.5 tracking-tight">10+</h4>
+            <p className="text-white/70 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold">Years of Excellence</p>
+          </div>
+          
+          {/* Stat 2 */}
+          <div className="flex-1 p-5 sm:p-6 lg:py-8 border-b sm:border-b-0 sm:border-r border-white/10 text-center flex flex-col justify-center items-center hover:bg-white/5 transition-colors">
+            <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1.5 tracking-tight">5000+</h4>
+            <p className="text-white/70 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold">Placed Alumni</p>
+          </div>
+          
+          {/* Stat 3 */}
+          <div className="flex-1 p-5 sm:p-6 lg:py-8 text-center flex flex-col justify-center items-center hover:bg-white/5 transition-colors">
+            <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1.5 tracking-tight">50+</h4>
+            <p className="text-white/70 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold">Expert Faculty</p>
+          </div>
+          
+        </div>
+      </div>
+      
     </section>
   );
 }

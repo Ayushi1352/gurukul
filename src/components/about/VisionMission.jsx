@@ -1,129 +1,90 @@
-"use client";
 import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaEye, FaBullseye, FaRocket } from 'react-icons/fa';
 
 export default function VisionMission() {
-  const cards = [
-    {
-      title: "Our Vision",
-      icon: <FaEye className="w-8 h-8 sm:w-10 sm:h-10 text-blue-200" />,
-      description:
-        "To emerge as a premier IT institute that nurtures talent, fosters innovation, and empowers students to become globally competent technology professionals capable of shaping the digital future.",
-    },
-    {
-      title: "Our Mission",
-      icon: <FaBullseye className="w-8 h-8 sm:w-10 sm:h-10 text-purple-200" />,
-      description:
-        "• Provide industry-aligned technical education.\n• Cultivate an environment of continuous learning and research.\n• Ensure 100% placement assistance in top-tier companies.",
-    },
-    {
-      title: "Our Goal",
-      icon: <FaRocket className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-200" />,
-      description:
-        "To establish a 100% tech-driven campus and become the top-ranked IT training institute, bridging the gap between academia and modern industry demands.",
-    },
-  ];
-
-  const sliderSettings = {
-    dots: true,
-    arrows: false,
-    infinite: false,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: false,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        },
-      },
-    ],
-  };
-
   return (
-    <section className="w-full bg-slate-50 border-t border-slate-100 py-24 px-4 sm:px-6 lg:px-10">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16 px-2 sm:px-6">
-          <span className="text-purple-600 font-bold tracking-wider uppercase text-sm mb-4 block">Who We Are</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
-            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Vision, Mission</span>
-            <br className="hidden md:block" /> And{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Goal</span>
+    <section className="bg-slate-900 py-12 lg:py-16 px-6 sm:px-8 lg:px-12 text-white overflow-hidden font-sans">
+      <div className="max-w-[1200px] mx-auto">
+        
+        {/* Massive Typography Header */}
+        <div className="mb-16 lg:mb-20">
+          <h2 className="text-[2.5rem] sm:text-[4rem] lg:text-[5.5rem] leading-[0.9] font-medium text-white mb-3 tracking-tighter">
+            Vision, Mission
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Discover the driving forces behind our commitment to excellence in technical education.
-          </p>
+          <div className="flex items-center gap-3 sm:gap-5 lg:gap-6 pl-8 sm:pl-20 lg:pl-32">
+            <div className="w-8 sm:w-12 lg:w-20 h-[2px] bg-white shrink-0"></div>
+            <h2 className="text-[2.5rem] sm:text-[4rem] lg:text-[5.5rem] leading-[0.9] font-medium text-white tracking-tighter">
+              & Goal
+            </h2>
+          </div>
         </div>
+        
+        {/* Staggered Rows */}
+        <div className="flex flex-col gap-12 lg:gap-16">
+          
+          {/* Vision Row */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12">
+            <div className="w-full lg:w-[45%] lg:mt-4">
+              <h3 className="text-xl font-bold mb-3 tracking-wide">Vision:</h3>
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+                To emerge as a premier IT institute that nurtures talent, fosters innovation, and empowers students to become globally competent technology professionals capable of shaping the digital future.
+              </p>
+            </div>
+            <div className="w-full sm:w-[80%] lg:w-[45%]">
+               <img 
+                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Vision" 
+                 className="w-full h-auto aspect-[21/9] lg:aspect-[16/9] object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 shadow-2xl rounded-sm" 
+               />
+            </div>
+          </div>
 
-        {/* Carousel */}
-        <div className="w-full px-1 sm:px-3 md:px-6 pb-12 relative z-10">
-          <Slider {...sliderSettings}>
-            {cards.map((card, idx) => (
-              <div key={idx} className="px-3 h-full">
-                <div
-                  className="text-white rounded-3xl shadow-lg h-full flex flex-col justify-start items-center p-8 md:p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group"
-                  style={{
-                    background: "linear-gradient(135deg, #1e3a8a 0%, #4c1d95 100%)",
-                  }}
-                >
-                  <div className="bg-white/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-inner flex-shrink-0">
-                    {card.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-center w-full flex-shrink-0">
-                    {card.title}
-                  </h3>
-                  <div className="text-base leading-relaxed text-blue-50 whitespace-pre-line text-center w-full flex-grow">
-                    {card.description}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
+          {/* Mission Row */}
+          <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12">
+            <div className="w-full sm:w-[80%] lg:w-[45%]">
+               <img 
+                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Mission" 
+                 className="w-full h-auto aspect-[21/9] lg:aspect-[16/9] object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 shadow-2xl rounded-sm" 
+               />
+            </div>
+            <div className="w-full lg:w-[45%] lg:mt-4">
+              <h3 className="text-xl font-bold mb-3 tracking-wide">Mission:</h3>
+              <ul className="text-base sm:text-lg text-slate-300 leading-relaxed font-light space-y-2">
+                <li className="flex items-start gap-3">
+                  <span className="text-white mt-1">•</span> 
+                  <span>Provide industry-aligned technical education.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-white mt-1">•</span> 
+                  <span>Cultivate an environment of continuous learning and research.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-white mt-1">•</span> 
+                  <span>Ensure 100% placement assistance in top-tier companies.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Goal Row */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12">
+            <div className="w-full lg:w-[45%] lg:mt-4">
+              <h3 className="text-xl font-bold mb-3 tracking-wide">Goal:</h3>
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+                To establish a 100% tech-driven campus and become the top-ranked IT training institute, bridging the gap between academia and modern industry demands.
+              </p>
+            </div>
+            <div className="w-full sm:w-[80%] lg:w-[45%]">
+               <img 
+                 src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Goal" 
+                 className="w-full h-auto aspect-[21/9] lg:aspect-[16/9] object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 shadow-2xl rounded-sm" 
+               />
+            </div>
+          </div>
+
         </div>
       </div>
-      
-      <style dangerouslySetInnerHTML={{__html: `
-        /* Ensures all cards stretch to be equal height */
-        .slick-track {
-          display: flex !important;
-        }
-        .slick-slide {
-          height: inherit !important;
-        }
-        .slick-slide > div {
-          height: 100%;
-        }
-        
-        .slick-dots {
-          bottom: -20px !important;
-        }
-        .slick-dots li button:before {
-          font-size: 12px;
-          color: #94a3b8 !important;
-          opacity: 0.5;
-        }
-        .slick-dots li.slick-active button:before {
-          color: #7c3aed !important;
-          opacity: 1;
-        }
-      `}} />
     </section>
   );
 }

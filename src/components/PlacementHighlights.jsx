@@ -1,72 +1,142 @@
 "use client";
 import React from 'react';
-import { FaTrophy, FaBriefcase, FaBuilding } from 'react-icons/fa';
+import { FaCalendarAlt, FaLayerGroup, FaArrowDown, FaStar, FaCode, FaLaptopCode } from 'react-icons/fa';
 
 export default function PlacementHighlights() {
-  const stats = [
-    { icon: <FaTrophy />, value: "100%", label: "Placement Assistance", desc: "Dedicated support until you get hired." },
-    { icon: <FaBriefcase />, value: "500+", label: "Students Placed", desc: "Working in top MNCs globally." },
-    { icon: <FaBuilding />, value: "50+", label: "Hiring Partners", desc: "Direct tie-ups with tech giants." }
-  ];
-
-  const recruiters = ["TCS", "INFOSYS", "WIPRO", "TECH MAHINDRA", "HCL", "COGNIZANT", "ACCENTURE", "IBM", "CAPGEMINI"];
-
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-purple-600 font-bold tracking-wider uppercase text-sm mb-4 block">Proven Success</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Your Dream Job Awaits</h2>
-          <p className="text-xl text-slate-600">We don't just teach you how to code; we launch your tech career. Our dedicated placement cell ensures you get the best opportunities.</p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          {stats.map((stat, idx) => (
-            <div key={idx} className="group relative bg-white rounded-[2rem] p-10 text-center border border-slate-100 hover:border-purple-200 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(147,51,234,0.2)] hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-b from-white to-purple-50/50 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 text-purple-600 text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-sm">
-                  {stat.icon}
-                </div>
-                <h3 className="text-5xl font-black text-slate-900 mb-4 tracking-tighter">{stat.value}</h3>
-                <p className="text-xl font-bold text-slate-800 mb-2">{stat.label}</p>
-                <p className="text-slate-500">{stat.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="py-20 lg:py-28 bg-[#F8F9FA] relative overflow-hidden font-sans">
+      
+      {/* Floating background elements */}
+      <div className="absolute top-32 left-10 lg:left-32 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-blue-500 animate-[bounce_3s_infinite]">
+        <FaCode className="text-xl" />
+      </div>
+      <div className="absolute top-40 right-10 lg:right-32 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-purple-500 animate-[bounce_4s_infinite]">
+        <FaLaptopCode className="text-xl" />
       </div>
 
-      {/* Infinite Marquee of Recruiters */}
-      <div className="w-full bg-white border-y border-slate-200 py-12 relative flex overflow-hidden">
-        {/* Gradient Fades for marquee */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="flex animate-marquee whitespace-nowrap items-center">
-          {[...recruiters, ...recruiters].map((company, idx) => (
-            <span key={idx} className="mx-12 text-3xl md:text-4xl font-black text-slate-300 hover:text-purple-600 transition-colors duration-300 cursor-pointer select-none">
-              {company}
-            </span>
-          ))}
+        {/* Top Header Section */}
+        <div className="text-center max-w-4xl mx-auto flex flex-col items-center">
+          
+          {/* Top small badge */}
+          <div className="inline-flex items-center gap-2 text-slate-700 font-semibold text-sm mb-6 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+            <span className="text-blue-600">📈</span> 500+ Students already placed. <span className="text-blue-600">Hurry up!</span>
+          </div>
+
+          {/* Main Heading */}
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-[1.15]">
+            Master Tech & Software with <br className="hidden lg:block"/>
+            <span className="text-blue-700">100% Placement Assistance.</span>
+          </h2>
+          
+          <p className="text-lg lg:text-xl text-slate-600 mb-10 max-w-2xl font-medium">
+            We don't just teach you how to code; we launch your tech career. Earn a successful career in top MNCs right after completing your course!
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-10">
+            <button className="w-full sm:w-auto px-8 py-3.5 bg-slate-900 text-white rounded-full font-bold text-lg hover:bg-slate-800 transition-colors shadow-lg">
+              Enroll Now
+            </button>
+            <button className="w-full sm:w-auto px-8 py-3.5 bg-transparent text-slate-700 rounded-full font-bold text-lg hover:bg-slate-200 transition-colors">
+              Talk to Counsellor
+            </button>
+          </div>
+
+          {/* Reviews */}
+          <div className="flex flex-col items-center gap-2 mb-16">
+            <div className="flex items-center gap-1 text-yellow-400 text-xl">
+              <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+              <span className="text-slate-800 font-bold ml-2 text-lg">4.8</span>
+            </div>
+            <p className="text-slate-500 text-sm font-medium">From 639+ <span className="underline decoration-slate-300 underline-offset-4 cursor-pointer hover:text-slate-700">Reviews</span></p>
+          </div>
         </div>
-        
-        <style dangerouslySetInnerHTML={{__html: `
-          @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-marquee {
-            animation: marquee 25s linear infinite;
-            width: max-content;
-          }
-          .animate-marquee:hover {
-            animation-play-state: paused;
-          }
-        `}} />
+
+        {/* Cards Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-4 xl:gap-6 w-full">
+          
+          {/* Card 1 (Dark) */}
+          <div className="w-full sm:w-2/3 lg:w-[280px] xl:w-[300px] shrink-0 h-auto lg:h-[400px] bg-slate-900 rounded-[2rem] p-6 lg:p-8 text-white relative overflow-hidden flex flex-col shadow-2xl z-10 group">
+            <div className="absolute inset-0 opacity-20 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff10_10px,#ffffff10_20px)] transition-transform duration-700 group-hover:scale-110"></div>
+            
+            <div className="relative z-10 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center border border-white/20 mb-6 backdrop-blur-sm">
+               <FaCalendarAlt className="text-xl text-blue-300" />
+            </div>
+            <div className="relative z-10 space-y-5 lg:space-y-6 flex-grow flex flex-col justify-center">
+              <div>
+                <p className="text-slate-400 text-[11px] xl:text-xs uppercase tracking-wider mb-1 font-semibold">Admission Closes on</p>
+                <p className="font-bold text-white text-base xl:text-lg flex flex-wrap items-center gap-2">
+                  15th Oct 
+                  <span className="bg-yellow-500/20 text-yellow-400 text-[9px] xl:text-[10px] px-2 py-0.5 rounded uppercase tracking-wider font-bold border border-yellow-500/30">Limited seats</span>
+                </p>
+              </div>
+              <div className="w-full h-px bg-white/10"></div>
+              <div>
+                <p className="text-slate-400 text-[11px] xl:text-xs uppercase tracking-wider mb-1 font-semibold">Course Duration</p>
+                <p className="font-bold text-white text-base xl:text-lg">1 - 2 Years</p>
+              </div>
+              <div className="w-full h-px bg-white/10"></div>
+              <div>
+                <p className="text-slate-400 text-[11px] xl:text-xs uppercase tracking-wider mb-1 font-semibold">Flexible schedule</p>
+                <p className="font-bold text-white text-base xl:text-lg">Learn at your own pace</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Middle Group container */}
+          <div className="flex flex-col sm:flex-row w-full lg:flex-1 gap-6 lg:gap-4 xl:gap-6 items-center justify-center h-full">
+            
+            {/* Card 2 (Light Blue) */}
+            <div className="w-full sm:w-1/3 h-[240px] lg:h-[320px] bg-[#93C5FD] rounded-[2rem] p-4 xl:p-6 flex flex-col justify-center items-center text-center shadow-lg transition-transform hover:-translate-y-2 duration-300">
+              <h3 className="text-4xl lg:text-[3rem] xl:text-[3.5rem] font-black text-slate-900 mb-2 lg:mb-4 tracking-tighter leading-none">500+</h3>
+              <p className="text-slate-800 font-semibold text-sm xl:text-lg leading-snug">Students Placed in<br/>top MNCs globally</p>
+            </div>
+
+            {/* Card 3 (White) */}
+            <div className="w-full sm:w-1/3 h-[220px] lg:h-[260px] bg-white border border-slate-200 rounded-[2rem] p-4 xl:p-6 flex flex-col items-center justify-center text-center shadow-xl shadow-slate-200/50 transition-transform hover:-translate-y-2 duration-300 z-20">
+              <h4 className="text-base lg:text-lg xl:text-xl font-extrabold text-slate-900 mb-4 lg:mb-6 leading-snug px-1">How will you get a guaranteed placement?</h4>
+              <button className="bg-slate-900 text-white px-4 xl:px-6 py-2.5 xl:py-3 rounded-full font-bold text-xs xl:text-sm flex items-center gap-2 hover:bg-slate-800 transition-colors w-[95%] xl:w-[90%] justify-center shadow-md">
+                <FaArrowDown className="text-xs" /> Learn More
+              </button>
+            </div>
+
+            {/* Card 4 (Light Green) */}
+            <div className="w-full sm:w-1/3 h-[240px] lg:h-[320px] bg-[#BBF7D0] rounded-[2rem] p-4 xl:p-6 flex flex-col justify-center items-center text-center shadow-lg transition-transform hover:-translate-y-2 duration-300">
+              <h3 className="text-4xl lg:text-[3rem] xl:text-[3.5rem] font-black text-slate-900 mb-2 lg:mb-4 tracking-tighter leading-none">50+</h3>
+              <p className="text-slate-800 font-semibold text-sm xl:text-lg leading-snug">Hiring Partners<br/>with tech giants</p>
+            </div>
+
+          </div>
+
+          {/* Card 5 (Dark) */}
+          <div className="w-full sm:w-2/3 lg:w-[280px] xl:w-[300px] shrink-0 h-auto lg:h-[400px] bg-slate-900 rounded-[2rem] p-6 lg:p-8 text-white relative overflow-hidden flex flex-col shadow-2xl z-10 group">
+            <div className="absolute inset-0 opacity-20 bg-[repeating-linear-gradient(-45deg,transparent,transparent_10px,#ffffff10_10px,#ffffff10_20px)] transition-transform duration-700 group-hover:scale-110"></div>
+            
+            <div className="relative z-10 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center border border-white/20 mb-6 backdrop-blur-sm">
+               <FaLayerGroup className="text-xl text-purple-300" />
+            </div>
+            <div className="relative z-10 space-y-5 lg:space-y-6 flex-grow flex flex-col justify-center">
+              <div>
+                <p className="text-slate-400 text-[11px] xl:text-xs uppercase tracking-wider mb-1 font-semibold">Beginner Level</p>
+                <p className="font-bold text-white text-base xl:text-lg leading-tight">No prior experience<br/>required</p>
+              </div>
+              <div className="w-full h-px bg-white/10"></div>
+              <div>
+                <p className="text-slate-400 text-[11px] xl:text-xs uppercase tracking-wider mb-1 font-semibold">Guarantee</p>
+                <p className="font-bold text-white text-base xl:text-lg">100% Placement Support</p>
+              </div>
+              <div className="w-full h-px bg-white/10"></div>
+              <div>
+                <p className="text-slate-400 text-[11px] xl:text-xs uppercase tracking-wider mb-1 font-semibold">Instructors</p>
+                <p className="font-bold text-white text-base xl:text-lg">Industry Experts</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
