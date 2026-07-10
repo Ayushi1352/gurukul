@@ -1,169 +1,195 @@
 "use client";
 import React, { useState } from 'react';
-import { FaPaperPlane, FaUser, FaEnvelope, FaPhoneAlt, FaGraduationCap } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaHistory, FaHeadset, FaUserCheck, FaArrowRight } from 'react-icons/fa';
 
 export default function AdmissionForm() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
+    email: '',
     course: '',
     message: ''
   });
 
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value});
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Dummy submit
     alert("Application submitted successfully! Our counselors will contact you shortly.");
-    setFormData({ name: '', email: '', phone: '', course: '', message: '' });
+    setFormData({ name: '', phone: '', email: '', course: '', message: '' });
   };
 
   return (
-    <section id="admission-form" className="py-24 bg-gradient-to-br from-blue-900 to-purple-900 relative">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-        <div className="absolute top-40 -left-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-      </div>
+    <section id="admission-form" className="py-24 bg-[#f6f6f8] font-sans relative">
+      <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-12 lg:gap-16">
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
-          
-          {/* Form Left Side - Info */}
-          <div className="lg:w-5/12 bg-gradient-to-br from-blue-600 to-purple-600 p-10 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
-            <div className="relative z-10">
-              <h3 className="text-3xl font-extrabold mb-4">Start Your Application</h3>
-              <p className="text-blue-100 text-lg mb-8 leading-relaxed">
+        {/* Top Split Area */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+
+          {/* Left Content */}
+          <div className="flex-1 flex flex-col justify-between pt-4">
+            <div>
+              <h2 className="text-[3.5rem] lg:text-[4.5rem] font-bold text-slate-900 mb-6 tracking-tight leading-[1.05]">
+                Start Your <br className="hidden lg:block" /> Application
+              </h2>
+              <p className="text-slate-600 text-lg mb-12 max-w-md leading-relaxed">
                 Fill out the form below to register your interest. Our academic counselors will reach out to guide you through the next steps of the admission process.
               </p>
-              
-              <div className="space-y-6">
+
+              {/* Feature List matching screenshot */}
+              <div className="space-y-5 mb-12">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-xl shrink-0 backdrop-blur-sm">
-                    <FaPhoneAlt />
+                  <div className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                    <FaHistory className="text-sm" />
                   </div>
-                  <div>
-                    <p className="text-blue-200 text-sm font-medium">Call Us Now</p>
-                    <p className="font-bold text-lg">+91 98765 43210</p>
-                  </div>
+                  <span className="text-slate-800 font-semibold">24 hours reply time</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-xl shrink-0 backdrop-blur-sm">
-                    <FaEnvelope />
+                  <div className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                    <FaHeadset className="text-sm" />
                   </div>
-                  <div>
-                    <p className="text-blue-200 text-sm font-medium">Email Address</p>
-                    <p className="font-bold text-lg">admission@gurukuliti.com</p>
+                  <span className="text-slate-800 font-semibold">Personal assistance</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                    <FaUserCheck className="text-sm" />
                   </div>
+                  <span className="text-slate-800 font-semibold">Expert academic counselors</span>
                 </div>
               </div>
             </div>
+
+
           </div>
 
-          {/* Form Right Side - Inputs */}
-          <div className="lg:w-7/12 p-10 lg:p-12 bg-white">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Full Name</label>
-                  <div className="relative">
-                    <FaUser className="absolute left-4 top-3.5 text-slate-400" />
-                    <input 
-                      type="text" 
+          {/* Right Content - Form Box */}
+          <div className="flex-[1.2]">
+            <div className="bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+              <form onSubmit={handleSubmit} className="space-y-6">
+
+                {/* Row 1 */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-slate-900 pl-2">Full Name</label>
+                    <input
+                      type="text"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
                       placeholder="John Doe"
                     />
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Phone Number</label>
-                  <div className="relative">
-                    <FaPhoneAlt className="absolute left-4 top-3.5 text-slate-400" />
-                    <input 
-                      type="tel" 
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-slate-900 pl-2">Phone Number</label>
+                    <input
+                      type="tel"
                       name="phone"
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
                       placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-slate-700">Email Address</label>
-                <div className="relative">
-                  <FaEnvelope className="absolute left-4 top-3.5 text-slate-400" />
-                  <input 
-                    type="email" 
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                    placeholder="john@example.com"
-                  />
+                {/* Row 2 */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-slate-900 pl-2">Email Address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-slate-900 pl-2">Interested Course</label>
+                    <select
+                      name="course"
+                      required
+                      value={formData.course}
+                      onChange={handleChange}
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white appearance-none"
+                    >
+                      <option value="" disabled>Select a Program...</option>
+                      <option value="Web Development">Full Stack Web Development</option>
+                      <option value="Data Science">Data Science & AI</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="UI/UX Design">UI/UX & Graphic Design</option>
+                      <option value="Hardware Networking">Hardware & Networking</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-slate-700">Interested Course</label>
-                <div className="relative">
-                  <FaGraduationCap className="absolute left-4 top-3.5 text-slate-400" />
-                  <select 
-                    name="course"
-                    required
-                    value={formData.course}
+                {/* Message */}
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-slate-900 pl-2">Any Questions? (Optional)</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
-                    className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-slate-700 appearance-none"
+                    rows="4"
+                    className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white resize-none"
+                    placeholder="Ask us anything..."
+                  ></textarea>
+                </div>
+
+                {/* Submit Button with inner border effect matching screenshot */}
+                <div className="p-1.5 rounded-[1.25rem] border border-slate-300 bg-transparent mt-8">
+                  <button
+                    type="submit"
+                    className="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-lg rounded-xl transition-colors duration-300 shadow-md flex items-center justify-center"
                   >
-                    <option value="" disabled>Select a Program...</option>
-                    <option value="Web Development">Full Stack Web Development</option>
-                    <option value="Data Science">Data Science & AI</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX & Graphic Design</option>
-                    <option value="Cyber Security">Cyber Security</option>
-                    <option value="Hardware Networking">Hardware & Networking</option>
-                  </select>
+                    Submit Application
+                  </button>
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-slate-700">Any Questions? (Optional)</label>
-                <textarea 
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="3"
-                  className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="Ask us anything..."
-                ></textarea>
-              </div>
+              </form>
+            </div>
+          </div>
+        </div>
 
-              <button 
-                type="submit"
-                className="w-full py-4 bg-slate-900 hover:bg-purple-600 text-white text-lg font-bold rounded-xl transition-colors duration-300 flex items-center justify-center gap-3 group"
-              >
-                Submit Application <FaPaperPlane className="group-hover:translate-x-1 transition-transform" />
-              </button>
+        {/* Bottom Cards (Bento Style Contact Info) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
 
-            </form>
+          {/* Card 1: Email */}
+          <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+              <FaEnvelope />
+            </div>
+            <h4 className="text-xl font-bold text-slate-900 mb-2">Email Address</h4>
+            <p className="text-slate-500 font-medium">admission@gurukuliti.com</p>
+          </div>
+
+          {/* Card 2: Call */}
+          <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+              <FaPhoneAlt />
+            </div>
+            <h4 className="text-xl font-bold text-slate-900 mb-2">Call Us Now</h4>
+            <p className="text-slate-500 font-medium">+91 98765 43210</p>
+          </div>
+
+          {/* Card 3: Location */}
+          <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+              <FaMapMarkerAlt />
+            </div>
+            <h4 className="text-xl font-bold text-slate-900 mb-2">Our Campus</h4>
+            <p className="text-slate-500 font-medium">Tech Park, Phase 1, India</p>
           </div>
 
         </div>
+
       </div>
     </section>
   );

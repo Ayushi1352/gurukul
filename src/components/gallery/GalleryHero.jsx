@@ -1,35 +1,65 @@
+"use client";
 import React from 'react';
+import { FaImage, FaArrowRight } from 'react-icons/fa';
 
 export default function GalleryHero() {
   return (
-    <section className="relative bg-slate-900 border-b border-slate-800">
-      <div 
-        className="relative pt-32 pb-40 md:pt-40 md:pb-56 px-4 overflow-hidden flex items-center justify-center text-center"
+    <section
+      className="relative w-full bg-slate-950 font-sans overflow-hidden py-24 lg:py-40 border-b border-slate-800 min-h-[100vh] lg:min-h-[110vh]"
+      style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Dark Gradient Overlay for perfect readability on the left where text is */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50 backdrop-blur-sm z-0 pointer-events-none"></div>
+
+      {/* Subtle Background Grid */}
+      <div
+        className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundImage: `radial-gradient(circle at 2px 2px, white 2px, transparent 0)`,
+          backgroundSize: '48px 48px'
         }}
-      >
-        <div className="absolute inset-0 bg-blue-950/85 backdrop-blur-sm"></div>
-        
-        {/* Dynamic Glows */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-[100px]"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <span className="inline-flex items-center justify-center gap-2 py-1.5 px-5 rounded-full bg-white/10 text-blue-200 border border-white/20 font-bold text-xs sm:text-sm tracking-[0.2em] uppercase backdrop-blur-md mb-6">
+      ></div>
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 flex flex-col items-start mt-16 lg:mt-24">
+
+        {/* Top Pill Badge */}
+        <div className="flex items-center gap-3 bg-slate-900/80 border border-slate-700/50 rounded-full p-1.5 pr-5 mb-8 backdrop-blur-md shadow-2xl">
+          <span className="bg-blue-600 text-white text-[10px] sm:text-xs font-bold tracking-wide px-3 py-1 rounded-full drop-shadow-md flex items-center gap-2">
+            <FaImage /> Campus Tour
+          </span>
+          <span className="text-slate-200 text-xs sm:text-sm font-medium drop-shadow-md">
             Life At Gurukul
           </span>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Gallery</span>
-          </h1>
-          
-          <p className="text-base sm:text-lg md:text-xl text-blue-100 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
-            Explore the vibrant campus life, state-of-the-art laboratories, and unforgettable moments at Gurukul ITI.
-          </p>
         </div>
+
+        {/* Main Heading */}
+        <h1 className="text-4xl sm:text-5xl lg:text-[5rem] font-semibold text-white mb-6 tracking-tight leading-[1.05] drop-shadow-2xl">
+          Our Gallery
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-base sm:text-lg lg:text-xl text-slate-300 font-normal mb-12 max-w-2xl leading-relaxed drop-shadow-lg">
+          Explore the vibrant campus life, state-of-the-art laboratories, and unforgettable moments at Gurukul ITI.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <button
+            onClick={() => {
+              const section = document.getElementById('gallery-grid');
+              if (section) section.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="w-full sm:w-auto bg-white hover:bg-slate-200 text-slate-900 font-semibold px-8 py-3.5 rounded-full transition-colors text-sm sm:text-base whitespace-nowrap shadow-xl flex items-center justify-center gap-2"
+          >
+            Explore Photos <FaArrowRight />
+          </button>
+        </div>
+
       </div>
     </section>
   );

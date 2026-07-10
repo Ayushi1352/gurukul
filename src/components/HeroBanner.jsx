@@ -4,7 +4,7 @@ import React from 'react';
 export default function HeroBanner() {
   return (
     <div className="w-full lg:px-4 lg:pb-4 xl:px-6 xl:pb-6 pt-3">
-      <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-900 via-blue-950 to-[#0a1128] lg:rounded-[3rem] min-h-[100svh] lg:min-h-[90vh] flex items-center pt-28 lg:pt-32 pb-16">
+      <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-900 via-blue-950 to-[#0a1128] lg:rounded-[3rem] min-h-[100svh] lg:min-h-[85vh] flex items-center pt-20 lg:pt-24 pb-16 lg:pb-0">
 
         {/* Subtle Background Glows */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -62,7 +62,7 @@ export default function HeroBanner() {
               </div>
             </div>
 
-            <div className="relative z-10 w-[280px] h-[580px] sm:w-[340px] sm:h-[580px] lg:bg-[#000000] rounded-[2.5rem] lg:rounded-[3rem] lg:p-1 shadow-2xl border-0 lg:border lg:border-gray-700/40 transform hover:-translate-y-2 transition-transform duration-500 group">
+            <div className="relative z-10 w-[260px] h-[520px] sm:w-[300px] sm:h-[520px] lg:bg-[#000000] rounded-[2.5rem] lg:rounded-[3rem] lg:p-1 shadow-2xl border-0 lg:border lg:border-gray-700/40 transform hover:-translate-y-2 transition-transform duration-500 group">
 
               {/* Phone Screen */}
               <div className="w-full h-full rounded-[2.5rem] lg:rounded-[2.4rem] overflow-hidden relative bg-slate-900 border-0 lg:border lg:border-gray-800">
