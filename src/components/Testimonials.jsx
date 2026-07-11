@@ -36,7 +36,7 @@ export default function Testimonials() {
           <p className="text-xl text-slate-400">Don't just take our word for it. Discover how Gurukul ITI has transformed careers and launched our students into the tech world.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, idx) => (
             <div key={idx} className="bg-slate-800/50 backdrop-blur-xl rounded-[2rem] p-10 border border-slate-700 hover:bg-slate-800 transition-all duration-500 hover:-translate-y-2 group relative shadow-2xl">
               <FaQuoteLeft className="text-6xl text-slate-700/50 absolute top-8 right-8 group-hover:text-purple-500/20 transition-colors duration-500" />

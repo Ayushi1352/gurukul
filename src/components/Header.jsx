@@ -196,6 +196,16 @@ export default function Header() {
               </Link>
             )
           )}
+          {/* Contact Us - Manually added for mobile menu since it's a separate button on desktop */}
+          <Link
+            href="/contact"
+            className={`flex items-center text-[15px] font-medium px-4 py-3 rounded-2xl transition-all ${pathname === '/contact'
+              ? "text-[#3D69AB] bg-[#EBEDFA] shadow-sm"
+              : "text-gray-700 hover:text-[#3D69AB] hover:bg-[#EBEDFA]/50 hover:shadow-sm"
+              }`}
+          >
+            Contact Us
+          </Link>
         </div>
 
         <div className="p-6 border-t border-gray-100 bg-white space-y-3">

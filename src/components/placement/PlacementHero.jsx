@@ -5,7 +5,7 @@ import { FaHandshake, FaArrowRight, FaChartLine, FaUsers, FaBuilding, FaRupeeSig
 export default function PlacementHero() {
   return (
     <section
-      className="relative w-full bg-slate-950 font-sans overflow-hidden py-24 lg:py-36 border-b border-slate-800"
+      className="relative w-full bg-slate-950 font-sans overflow-hidden pt-24 pb-10 sm:py-24 lg:py-36 border-b border-slate-800"
       style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop')",
         backgroundSize: 'cover',
@@ -61,7 +61,7 @@ export default function PlacementHero() {
         </div>
 
         {/* Stats Below Button */}
-        <div className="mt-12 sm:mt-16 flex flex-wrap items-center gap-6 sm:gap-10">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 gap-y-6 gap-x-4 sm:flex sm:flex-wrap sm:items-center sm:gap-10">
           <div className="flex items-center gap-3">
             <FaChartLine className="text-2xl sm:text-3xl text-blue-400 drop-shadow-md" />
             <div className="flex flex-col">

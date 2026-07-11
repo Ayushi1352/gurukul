@@ -46,35 +46,45 @@ export default function FacultyOverview() {
     nepal: "https://res.cloudinary.com/dbjc1bef7/image/upload/v1762433524/flag_1_ax223e.png",
   };
 
+  const [slidesToShow, setSlidesToShow] = useState(4);
+  const [isMounted, setIsMounted] = useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 768) {
+        setSlidesToShow(2);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(2);
+      } else if (window.innerWidth < 1280) {
+        setSlidesToShow(3);
+      } else {
+        setSlidesToShow(4);
+      }
+    };
+    
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const sliderSettings = {
     dots: true,
     infinite: false,
     speed: 600,
-    slidesToShow: 4,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,  
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: { slidesToShow: 3, centerMode: false },
-      },
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2, centerMode: false },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
-      },
-    ],
   };
 
   return (
     <section className="w-full py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Expert Mentors</span>
           <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 leading-[1.1] tracking-tight">Learn from Industry Leaders</h2>
@@ -94,7 +104,11 @@ export default function FacultyOverview() {
                 >
                   <div
                     className="aspect-[4/5] overflow-hidden relative flex-1 cursor-pointer"
-                    onClick={() => setSelectedExpert(expert)}
+                    onClick={() => {
+                      if (window.innerWidth >= 1024) {
+                        setSelectedExpert(expert);
+                      }
+                    }}
                   >
                     <img
                       src={expert.image}

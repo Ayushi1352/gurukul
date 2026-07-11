@@ -84,12 +84,12 @@ export default function TrainingAndSkills() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
               
-              <div className="absolute bottom-0 left-0 w-full p-10 transform transition-all duration-500">
-                <div className="w-16 h-16 rounded-2xl bg-blue-900 text-white flex items-center justify-center text-3xl mb-6 shadow-lg">
+              <div className="absolute bottom-0 left-0 w-full p-6 sm:p-10 transform transition-all duration-500">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-blue-900 text-white flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6 shadow-lg">
                   {skills[activeTab].icon}
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-4">{skills[activeTab].title}</h3>
-                <p className="text-slate-200 text-lg leading-relaxed">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4">{skills[activeTab].title}</h3>
+                <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
                   {skills[activeTab].desc}
                 </p>
               </div>
