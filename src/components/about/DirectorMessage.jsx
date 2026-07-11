@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function DirectorMessage() {
   return (
-    <section className="py-20 lg:py-28 bg-white font-sans">
+    <section className="py-20 lg:py-28 bg-[#EBEDFA] font-sans">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Centered Heading */}
         <div className="text-center mb-16 lg:mb-24">
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-slate-900 tracking-tight">
+          <h2 className="text-[2.5rem] sm:text-4xl lg:text-[3.5rem] font-semibold text-blue-900 tracking-tight leading-[1.1]">
             A Message from Our Director
           </h2>
         </div>
@@ -20,20 +20,20 @@ export default function DirectorMessage() {
             <img 
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
               alt="Dr. Vikram Singh" 
-              className="w-full h-auto aspect-[4/5] object-cover rounded-[0.75rem] shadow-xl"
+              className="w-full h-auto aspect-[4/5] object-cover rounded-3xl shadow-xl shadow-slate-200/40"
             />
           </div>
           
           {/* Text Content */}
           <div className="w-full lg:w-[65%] lg:pt-4">
-            <h3 className="text-2xl sm:text-[1.75rem] font-bold text-slate-900 mb-2 tracking-tight">
+            <h3 className="text-2xl sm:text-[1.75rem] font-semibold text-blue-900 mb-2 tracking-tight">
               Dr. Vikram Singh
             </h3>
-            <p className="text-sm sm:text-base text-slate-600 mb-10 font-normal">
+            <p className="text-sm sm:text-base text-gray-700 mb-10 font-normal">
               Founder & Director, Gurukul ITI
             </p>
             
-            <div className="space-y-6 text-base sm:text-[1.125rem] text-slate-700 leading-relaxed font-normal">
+            <div className="space-y-6 text-base sm:text-[1.125rem] text-gray-700 leading-relaxed font-normal">
               <p>
                 At Gurukul ITI, we believe that technology is the greatest equalizer of our time. Our goal has never been just to teach coding, but to instill a mindset of problem-solving and continuous innovation.
               </p>

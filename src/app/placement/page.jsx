@@ -13,7 +13,7 @@ export default function PlacementPage() {
       <PlacementHero />
       <TrainingAndSkills />
       <RecruitmentProcess />
-      <PlacementStats />
+      {/* <PlacementStats /> */}
       <RecruitingCompanies />
       <SuccessStories />
       <PlacementGallery />

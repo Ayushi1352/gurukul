@@ -95,69 +95,60 @@ export default function CourseList() {
   };
 
   return (
-    <section className="py-24 bg-slate-50 relative">
+    <section className="py-24 bg-[#EBEDFA] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-purple-600 font-bold tracking-wider uppercase text-sm mb-4 block">Course Catalog</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Our Popular IT Courses</h2>
-          <p className="text-lg text-slate-600">
+          <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Course Catalog</span>
+          <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 leading-[1.1] tracking-tight">Our Popular IT Courses</h2>
+          <p className="text-lg text-gray-700 font-normal">
             Choose from a wide range of specialized programs designed to launch your career in the tech industry.
           </p>
         </div>
 
         {/* Course Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {courses.map((course) => (
-            <div 
-              key={course.id} 
-              className="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group flex flex-col"
+            <div
+              key={course.id}
+              className="group relative rounded-[1.5rem] p-3 sm:p-3.5 pb-4 sm:pb-5 border flex flex-col h-full overflow-hidden transition-all duration-300 bg-white text-slate-900 border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-[#3C64B1] hover:text-white hover:border-[#3C64B1]"
             >
-              {/* Card Header (Icon & Title) */}
-              <div className="p-8 pb-6 relative overflow-hidden">
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${getGradientText(course.theme)} opacity-5 rounded-bl-[100px] z-0 transition-transform duration-500 group-hover:scale-110`}></div>
-                
-                <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border ${getThemeColors(course.theme)}`}>
-                    {course.icon}
-                  </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900 mb-2 line-clamp-2">
-                    {course.name}
-                  </h3>
+              {/* Image Container */}
+              <div className="w-full h-48 sm:h-52 rounded-[1rem] overflow-hidden mb-5 relative">
+                <img
+                  src={`https://picsum.photos/seed/${course.id * 10}/600/400`}
+                  alt={course.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className={`absolute top-3 right-3 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg text-xl ${getThemeColors(course.theme).split(' ')[1]}`}>
+                  {course.icon}
                 </div>
               </div>
 
-              {/* Course Meta Data (Duration & Eligibility) */}
-              <div className="px-8 flex flex-col sm:flex-row gap-3 mb-6">
-                <div className="flex items-center gap-2 text-sm font-bold text-slate-600 bg-slate-100 px-4 py-2 rounded-xl flex-1">
-                  <FaClock className="text-slate-400" />
-                  {course.duration}
+              <h3 className="text-xl font-bold mb-3 leading-tight px-1">{course.name}</h3>
+
+              <p className="text-sm mb-5 flex-grow text-slate-600 group-hover:text-blue-100 transition-colors line-clamp-2 px-1">{course.description}</p>
+
+              {/* Info grid */}
+              <div className="grid grid-cols-2 gap-3 mb-5 text-[13px] font-medium px-1">
+                <div className="flex items-center gap-2 text-slate-500 group-hover:text-blue-100 transition-colors">
+                  <FaClock className="text-slate-400 group-hover:text-white transition-colors" />
+                  <span>{course.duration}</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm font-bold text-slate-600 bg-slate-100 px-4 py-2 rounded-xl flex-1">
-                  <FaGraduationCap className="text-slate-400" />
+                <div className="flex items-center gap-2 text-slate-500 group-hover:text-blue-100 transition-colors truncate">
+                  <FaGraduationCap className="text-slate-400 group-hover:text-white transition-colors" />
                   <span className="truncate">{course.eligibility}</span>
                 </div>
               </div>
 
-              {/* Description */}
-              <div className="px-8 mb-8 flex-grow">
-                <p className="text-slate-600 text-base leading-relaxed line-clamp-3">
-                  {course.description}
-                </p>
-              </div>
-
-              {/* Career Opportunities */}
-              <div className="px-8 mb-8">
-                <div className="flex items-center gap-2 mb-3">
-                  <FaBriefcase className="text-slate-400" />
-                  <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wider">Career Opportunities</h4>
-                </div>
+              {/* Opportunities */}
+              <div className="mb-6 px-1">
                 <div className="flex flex-wrap gap-2">
-                  {course.opportunities.map((job, idx) => (
+                  {course.opportunities.slice(0,2).map((job, idx) => (
                     <span 
                       key={idx} 
-                      className={`text-xs font-bold px-3 py-1.5 rounded-lg border ${getThemeColors(course.theme)} bg-opacity-50`}
+                      className="text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200 bg-slate-50 text-slate-600 group-hover:bg-blue-800/30 group-hover:border-blue-400 group-hover:text-white transition-colors"
                     >
                       {job}
                     </span>
@@ -165,10 +156,19 @@ export default function CourseList() {
                 </div>
               </div>
 
-              {/* CTA Footer */}
-              <div className="p-8 pt-0 mt-auto">
-                <Link href="/admission" className={`w-full flex items-center justify-center gap-3 py-4 rounded-xl font-bold text-white shadow-md hover:shadow-lg transition-all duration-300 bg-gradient-to-r ${getGradientText(course.theme)} hover:brightness-110`}>
-                  Apply Now <FaArrowRight />
+              {/* Buttons */}
+              <div className="flex items-center gap-3 mt-auto">
+                <Link
+                  href={`/courses/${course.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                  className="flex-1 text-center py-2.5 rounded-full border font-semibold text-sm transition-colors border-slate-300 text-slate-700 hover:bg-slate-50 group-hover:border-white group-hover:text-white hover:!bg-white hover:!text-[#3C64B1]"
+                >
+                  Learn More
+                </Link>
+                <Link
+                  href="/admission"
+                  className="flex-1 text-center py-2.5 rounded-full font-semibold text-sm transition-colors bg-[#191313] text-white hover:bg-black group-hover:bg-white group-hover:text-[#3C64B1] hover:!bg-blue-50"
+                >
+                  Apply Now
                 </Link>
               </div>
             </div>

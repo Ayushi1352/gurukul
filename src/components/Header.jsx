@@ -12,7 +12,6 @@ const navigation = [
   { name: "Admission", href: "/admission" },
   { name: "Placement", href: "/placement" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -51,10 +50,9 @@ export default function Header() {
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
         <header
           className={`pointer-events-auto w-full flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-            ${
-              isScrolled
-                ? "max-w-[100vw] rounded-none bg-[#F5F5F3]/95 backdrop-blur-xl py-3.5 px-6 lg:px-10 border-b border-gray-200 mt-0 shadow-sm"
-                : "w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] max-w-7xl rounded-[2.5rem] bg-[#EAE8E1]/60 backdrop-blur-md py-2.5 px-4 lg:px-6 border border-white/30 mt-4 sm:mt-6 shadow-lg"
+            ${isScrolled
+              ? "max-w-[100vw] rounded-none bg-white/85 backdrop-blur-md py-3.5 px-6 lg:px-10 border-b border-gray-200 mt-0 shadow-sm"
+              : "w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] max-w-7xl rounded-[2.5rem] bg-white/95 backdrop-blur-sm py-2.5 px-4 lg:px-6 border border-white/50 mt-4 sm:mt-6 shadow-lg"
             }
           `}
         >
@@ -74,16 +72,15 @@ export default function Header() {
               item.children ? (
                 <div className="relative group" key={item.name}>
                   <button
-                    className={`flex items-center gap-1.5 text-[14px] font-medium transition-colors duration-300 ${
-                      pathname?.startsWith(`/${item.name.toLowerCase()}`)
-                        ? "text-[#3D69AB]"
-                        : "text-gray-600 hover:text-[#3D69AB]"
-                    }`}
+                    className={`flex items-center gap-1.5 text-[14px] font-medium transition-colors duration-300 ${pathname?.startsWith(`/${item.name.toLowerCase()}`)
+                      ? "text-[#3D69AB]"
+                      : "text-gray-600 hover:text-[#3D69AB]"
+                      }`}
                   >
                     {item.name}
                     <FiChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                   </button>
-                  
+
                   {/* Dropdown Menu */}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className="bg-white border border-gray-100 rounded-2xl shadow-xl min-w-[200px] overflow-hidden p-2">
@@ -103,11 +100,10 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-[14px] font-medium transition-colors duration-300 ${
-                    pathname === item.href
-                      ? "text-[#3D69AB]"
-                      : "text-gray-600 hover:text-[#3D69AB]"
-                  }`}
+                  className={`text-[14px] font-medium transition-colors duration-300 ${pathname === item.href
+                    ? "text-[#3D69AB]"
+                    : "text-gray-600 hover:text-[#3D69AB]"
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -117,14 +113,6 @@ export default function Header() {
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-4 shrink-0">
-            <button className="text-gray-500 hover:text-black p-2 rounded-full transition-colors hidden xl:block">
-              <FiMoon className="w-5 h-5" />
-            </button>
-            
-            <Link href="/login" className="text-[14px] font-medium text-gray-600 hover:text-[#3D69AB] transition-colors px-2">
-              Sign in
-            </Link>
-            
             <Link href="/contact" className="px-5 py-2.5 rounded-full border border-gray-300 text-[14px] font-medium text-gray-800 hover:border-[#3D69AB] hover:text-[#3D69AB] hover:bg-[#EBEDFA] transition-all">
               Contact Us
             </Link>
@@ -151,9 +139,8 @@ export default function Header() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-screen w-full sm:w-[350px] bg-white shadow-2xl transform transition-transform duration-500 ease-out z-[60] flex flex-col ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-screen w-full sm:w-[350px] bg-white shadow-2xl transform transition-transform duration-500 ease-out z-[60] flex flex-col ${menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-white">
           <span className="font-extrabold text-xl tracking-tight text-[#191313]">
@@ -166,7 +153,7 @@ export default function Header() {
             <FaTimes className="h-5 w-5" />
           </button>
         </div>
-        
+
         <div className="flex-1 overflow-y-auto p-4 space-y-1 bg-gray-50/50">
           {navigation.map((item) =>
             item.children ? (
@@ -177,15 +164,13 @@ export default function Header() {
                 >
                   {item.name}
                   <FiChevronDown
-                    className={`transition-transform duration-300 ${
-                      expandedMobileDropdowns[item.name] ? "rotate-180 text-black" : ""
-                    }`}
+                    className={`transition-transform duration-300 ${expandedMobileDropdowns[item.name] ? "rotate-180 text-black" : ""
+                      }`}
                   />
                 </button>
                 <div
-                  className={`ml-4 space-y-1 overflow-hidden transition-all duration-300 ${
-                    expandedMobileDropdowns[item.name] ? "max-h-64 mt-1" : "max-h-0"
-                  }`}
+                  className={`ml-4 space-y-1 overflow-hidden transition-all duration-300 ${expandedMobileDropdowns[item.name] ? "max-h-64 mt-1" : "max-h-0"
+                    }`}
                 >
                   {item.children.map((child) => (
                     <Link
@@ -202,11 +187,10 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center text-[15px] font-medium px-4 py-3 rounded-2xl transition-all ${
-                  pathname === item.href
-                    ? "text-[#3D69AB] bg-[#EBEDFA] shadow-sm"
-                    : "text-gray-700 hover:text-[#3D69AB] hover:bg-[#EBEDFA]/50 hover:shadow-sm"
-                }`}
+                className={`flex items-center text-[15px] font-medium px-4 py-3 rounded-2xl transition-all ${pathname === item.href
+                  ? "text-[#3D69AB] bg-[#EBEDFA] shadow-sm"
+                  : "text-gray-700 hover:text-[#3D69AB] hover:bg-[#EBEDFA]/50 hover:shadow-sm"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -215,9 +199,6 @@ export default function Header() {
         </div>
 
         <div className="p-6 border-t border-gray-100 bg-white space-y-3">
-          <Link href="/login" className="flex justify-center items-center w-full bg-[#EBEDFA] text-[#3D69AB] px-4 py-3.5 rounded-full font-medium text-[15px] hover:bg-blue-100 transition-colors duration-300">
-            Sign in
-          </Link>
           <Link href="/admission" className="flex justify-center items-center w-full bg-[#191313] text-[#EBEDFA] px-4 py-3.5 rounded-full font-medium text-[15px] shadow-md hover:bg-black transition-colors duration-300">
             Apply For Admission
           </Link>

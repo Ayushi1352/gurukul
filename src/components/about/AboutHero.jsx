@@ -4,73 +4,74 @@ import Link from 'next/link';
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full font-sans overflow-hidden bg-slate-900 pt-28 lg:pt-32 flex flex-col">
-      
-      {/* Background Image & Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" 
-          alt="Gurukul ITI Campus" 
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
-        <div className="absolute inset-0 bg-black/30"></div>
-      </div>
+    <section
+      className="relative w-full font-sans overflow-hidden bg-slate-950 pt-28 lg:pt-32 flex flex-col border-b border-slate-800"
+      style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+
+      {/* Dark Gradient Overlay for perfect readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50 backdrop-blur-sm z-0 pointer-events-none"></div>
+
+      {/* Subtle Background Grid */}
+      <div
+        className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, white 2px, transparent 0)`,
+          backgroundSize: '48px 48px'
+        }}
+      ></div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 sm:px-8 lg:px-12 flex-grow flex flex-col justify-center pb-12 lg:pb-16">
-        
-        {/* Breadcrumbs */}
-        <div className="absolute top-0 left-6 sm:left-8 lg:left-12 flex items-center gap-2 text-white/70 text-xs sm:text-sm font-medium tracking-wide">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <span className="text-white/40">/</span>
-          <span className="text-white">About Us</span>
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center pb-12 lg:pb-16 mt-10">
+
+        {/* Top Pill Badge */}
+        <div className="inline-flex w-fit items-center gap-3 bg-slate-900/80 border border-slate-700/50 rounded-full p-1.5 pr-5 mb-8 backdrop-blur-md shadow-2xl">
+          <span className="bg-blue-600 text-white text-[10px] sm:text-xs font-bold tracking-wide px-3 py-1 rounded-full drop-shadow-md">
+            Admissions Open
+          </span>
+          <span className="text-slate-200 text-xs sm:text-sm font-medium drop-shadow-md">
+            New Batches Starting 2025
+          </span>
         </div>
 
-        <div className="max-w-3xl mt-4 lg:mt-8">
-          <p className="text-white/80 font-bold tracking-[0.2em] text-xs sm:text-sm uppercase mb-3 sm:mb-5">
-            Institute Overview
-          </p>
-          
-          <h1 className="text-3xl sm:text-4xl lg:text-[4rem] font-bold text-white mb-5 lg:mb-6 leading-[1.1] tracking-tight">
+        <div className="max-w-3xl">
+          <h1 className="text-3xl sm:text-5xl lg:text-[4rem] font-bold text-[#EBEDFA] mb-5 lg:mb-6 leading-[1.1] tracking-tight">
             Shaping the Tech Leaders of Tomorrow
           </h1>
-          
-          <p className="text-white/90 text-base sm:text-lg lg:text-xl font-medium mb-8 leading-relaxed max-w-2xl">
+
+          <p className="text-[#EBEDFA]/90 text-base sm:text-lg lg:text-xl font-medium mb-8 leading-relaxed max-w-2xl">
             Blending academic rigor with practical industry experience to ensure our students are always one step ahead in the digital world.
           </p>
-          
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 font-bold text-sm sm:text-base transition-all flex items-center gap-3 shadow-lg hover:shadow-blue-600/20">
-            Explore Programs <FaArrowRight className="text-sm" />
+
+          <button className="bg-[#191313] hover:bg-black text-[#EBEDFA] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1 w-fit">
+            Explore Programs <FaArrowRight className="text-sm font-light ml-1" />
           </button>
+
+          {/* Stats Below Button */}
+          <div className="mt-12 sm:mt-12 flex flex-wrap items-center gap-6 sm:gap-10  max-w-fit pr-8">
+            <div className="flex flex-row items-center gap-2">
+              <span className="text-xl sm:text-3xl font-bold text-[#EBEDFA] tracking-tight">10+</span>
+              <span className="text-slate-400 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold mt-1">Years of Excellence</span>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-slate-700/50"></div>
+            <div className="flex flex-row  items-center gap-2">
+              <span className="text-xl sm:text-3xl font-bold text-[#EBEDFA] tracking-tight">5000+</span>
+              <span className="text-slate-400 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold mt-1">Placed Alumni</span>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-slate-700/50"></div>
+            <div className="flex flex-row items-center gap-2">
+              <span className="text-xl sm:text-3xl font-bold text-[#EBEDFA] tracking-tight">50+</span>
+              <span className="text-slate-400 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold mt-1">Expert Faculty</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Bottom Glassmorphic Stats Bar */}
-      <div className="relative z-10 w-full flex justify-start lg:justify-end mt-auto">
-        <div className="w-full lg:w-[65%] xl:w-[55%] bg-slate-900/40 backdrop-blur-md border-t border-l-0 lg:border-l border-white/10 flex flex-col sm:flex-row">
-          
-          {/* Stat 1 */}
-          <div className="flex-1 p-5 sm:p-6 lg:py-8 border-b sm:border-b-0 sm:border-r border-white/10 text-center flex flex-col justify-center items-center hover:bg-white/5 transition-colors">
-            <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1.5 tracking-tight">10+</h4>
-            <p className="text-white/70 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold">Years of Excellence</p>
-          </div>
-          
-          {/* Stat 2 */}
-          <div className="flex-1 p-5 sm:p-6 lg:py-8 border-b sm:border-b-0 sm:border-r border-white/10 text-center flex flex-col justify-center items-center hover:bg-white/5 transition-colors">
-            <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1.5 tracking-tight">5000+</h4>
-            <p className="text-white/70 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold">Placed Alumni</p>
-          </div>
-          
-          {/* Stat 3 */}
-          <div className="flex-1 p-5 sm:p-6 lg:py-8 text-center flex flex-col justify-center items-center hover:bg-white/5 transition-colors">
-            <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1.5 tracking-tight">50+</h4>
-            <p className="text-white/70 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-bold">Expert Faculty</p>
-          </div>
-          
-        </div>
-      </div>
-      
     </section>
   );
 }

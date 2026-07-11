@@ -14,13 +14,13 @@ export default function ContactFormAndMap() {
   };
 
   return (
-    <section id="contact-form" className="py-24 bg-[#f6f6f8] font-sans relative">
+    <section id="contact-form" className="py-24 bg-[#EBEDFA] font-sans relative">
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-12 lg:gap-16">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-4">
-          <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">Connect</span>
-          <h2 className="text-[3.5rem] lg:text-[4rem] font-bold text-slate-900 mb-6 tracking-tight leading-[1.05]">
+          <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Connect</span>
+          <h2 className="text-[3.5rem] lg:text-[4rem] font-bold text-black mb-6 tracking-tight leading-[1.05]">
             Drop Us a Message
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">
@@ -36,8 +36,8 @@ export default function ContactFormAndMap() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
               
               {/* Card 1: Address */}
-              <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+              <div className="bg-white border border-transparent hover:border-blue-500/30 rounded-[2rem] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 transition-all duration-300">
                   <FaMapMarkerAlt />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">Institute Address</h4>
@@ -45,8 +45,8 @@ export default function ContactFormAndMap() {
               </div>
 
               {/* Card 2: Phone */}
-              <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+              <div className="bg-white border border-transparent hover:border-blue-500/30 rounded-[2rem] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 transition-all duration-300">
                   <FaPhoneAlt />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">Phone Number</h4>
@@ -54,8 +54,8 @@ export default function ContactFormAndMap() {
               </div>
 
               {/* Card 3: Email */}
-              <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+              <div className="bg-white border border-transparent hover:border-blue-500/30 rounded-[2rem] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 transition-all duration-300">
                   <FaEnvelope />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">Email Address</h4>
@@ -63,8 +63,8 @@ export default function ContactFormAndMap() {
               </div>
 
               {/* Card 4: Hours */}
-              <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+              <div className="bg-white border border-transparent hover:border-blue-500/30 rounded-[2rem] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 transition-all duration-300">
                   <FaClock />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">Office Hours</h4>
@@ -79,7 +79,7 @@ export default function ContactFormAndMap() {
             <div className="bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <form onSubmit={handleSubmit} className="space-y-6">
 
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 pl-2">Send an Enquiry</h3>
+                <h3 className="text-2xl font-bold text-black tracking-tight mb-6 pl-2">Send an Enquiry</h3>
 
                 {/* Row 1 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -91,7 +91,7 @@ export default function ContactFormAndMap() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
                       placeholder="John Doe"
                     />
                   </div>
@@ -103,7 +103,7 @@ export default function ContactFormAndMap() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -119,7 +119,7 @@ export default function ContactFormAndMap() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
                       placeholder="+91 98765 43210"
                     />
                   </div>
@@ -131,7 +131,7 @@ export default function ContactFormAndMap() {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
                       placeholder="Admission Enquiry"
                     />
                   </div>
@@ -146,7 +146,7 @@ export default function ContactFormAndMap() {
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     rows="5"
-                    className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white resize-none"
+                    className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500 resize-none"
                     placeholder="Write your query here..."
                   ></textarea>
                 </div>
@@ -155,7 +155,7 @@ export default function ContactFormAndMap() {
                 <div className="p-1.5 rounded-[1.25rem] border border-slate-300 bg-transparent mt-8">
                   <button
                     type="submit"
-                    className="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-lg rounded-xl transition-colors duration-300 shadow-md flex items-center justify-center gap-3"
+                    className="w-full py-4 bg-[#191313] hover:bg-black text-white font-semibold text-lg rounded-xl transition-colors duration-300 shadow-md flex items-center justify-center gap-3"
                   >
                     Send Message <FaPaperPlane />
                   </button>

@@ -30,12 +30,12 @@ export default function Achievements() {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-white font-sans overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[#EBEDFA] font-sans overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Centered Heading */}
         <div className="text-center mb-16 lg:mb-24">
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-slate-900 tracking-tight">
+          <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-blue-900 tracking-tight leading-[1.1]">
             Achievements
           </h2>
         </div>
@@ -49,7 +49,7 @@ export default function Achievements() {
             {/* Custom SVG Illustration mirroring the screenshot style */}
             <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto max-w-[400px] drop-shadow-xl hover:scale-105 transition-transform duration-500">
               {/* Organic Blob Background using theme blue */}
-              <path fill="#EEF2FF" d="M53.8,-71.4C69,-61.2,80.1,-44.7,85.5,-26.8C90.9,-8.9,90.6,10.4,83.4,27.1C76.2,43.8,62.1,57.9,46.1,67.6C30.1,77.3,12.2,82.6,-5.5,89.5C-23.2,96.4,-40.7,104.9,-54.6,97.7C-68.5,90.5,-78.8,67.6,-85.4,45C-92,22.4,-94.9,0.1,-89.2,-19.1C-83.5,-38.3,-69.2,-54.4,-52.3,-64.1C-35.4,-73.8,-17.7,-77.1,0.9,-78.2C19.5,-79.3,38.6,-81.6,53.8,-71.4Z" transform="translate(120 120) scale(0.9)" />
+              <path fill="#ffffff" d="M53.8,-71.4C69,-61.2,80.1,-44.7,85.5,-26.8C90.9,-8.9,90.6,10.4,83.4,27.1C76.2,43.8,62.1,57.9,46.1,67.6C30.1,77.3,12.2,82.6,-5.5,89.5C-23.2,96.4,-40.7,104.9,-54.6,97.7C-68.5,90.5,-78.8,67.6,-85.4,45C-92,22.4,-94.9,0.1,-89.2,-19.1C-83.5,-38.3,-69.2,-54.4,-52.3,-64.1C-35.4,-73.8,-17.7,-77.1,0.9,-78.2C19.5,-79.3,38.6,-81.6,53.8,-71.4Z" transform="translate(120 120) scale(0.9)" />
               
               {/* Trophy Base (Greenish/Slate block) */}
               <path d="M70,180 L170,180 L155,140 L85,140 Z" fill="#94A3B8" />
@@ -93,7 +93,7 @@ export default function Achievements() {
                     <h3 className={`text-xl sm:text-[1.35rem] font-bold ${colors.text} mb-2`}>
                       {item.title}
                     </h3>
-                    <p className="text-slate-500 leading-relaxed text-sm sm:text-base font-medium">
+                    <p className="text-gray-700 leading-relaxed text-sm sm:text-[15px] font-normal">
                       {item.desc}
                     </p>
                   </div>

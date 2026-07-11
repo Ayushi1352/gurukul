@@ -72,13 +72,13 @@ export default function FacultyOverview() {
   };
 
   return (
-    <section className="w-full py-24 bg-slate-50 border-t border-slate-100 relative">
+    <section className="w-full py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-purple-600 font-bold tracking-wider uppercase text-sm mb-4 block">Expert Mentors</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Learn from Industry Leaders</h2>
-          <p className="text-lg text-slate-600">Our faculty consists of seasoned tech professionals who bring real-world experience directly into the classroom.</p>
+          <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Expert Mentors</span>
+          <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 leading-[1.1] tracking-tight">Learn from Industry Leaders</h2>
+          <p className="text-lg text-gray-700 font-normal">Our faculty consists of seasoned tech professionals who bring real-world experience directly into the classroom.</p>
         </div>
 
         {/* Slider */}
@@ -87,7 +87,7 @@ export default function FacultyOverview() {
             {experts.map((expert, index) => (
               <div key={index} className="px-3 pb-8">
                 <div
-                  className="relative rounded-2xl overflow-hidden bg-white shadow-md border border-slate-100 h-full flex flex-col transition-all duration-500 hover:shadow-xl group"
+                  className="relative rounded-3xl overflow-hidden bg-[#EBEDFA] shadow-xl shadow-slate-200/40 h-full flex flex-col transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 group"
                   onMouseEnter={() => setActiveCard(index)}
                   onMouseLeave={() => setActiveCard(null)}
                   onTouchStart={() => setActiveCard(activeCard === index ? null : index)}
@@ -144,11 +144,11 @@ export default function FacultyOverview() {
                   </div>
 
                   {/* Bottom bar */}
-                  <div className="bg-white border-t border-slate-100 p-5 z-10 relative">
+                  <div className="bg-[#EBEDFA] p-5 z-10 relative">
                     <div className="flex justify-between items-center">
-                      <h3 className="font-bold text-slate-900 text-base">{expert.name}</h3>
+                      <h3 className="font-semibold text-blue-900 text-base">{expert.name}</h3>
                       <button
-                        className="text-blue-600 cursor-pointer hover:text-purple-600 text-sm font-bold transition-all duration-300 transform group-hover:scale-105"
+                        className="text-black cursor-pointer hover:text-blue-900 text-sm font-bold transition-all duration-300 transform group-hover:scale-105"
                         onClick={() => setSelectedExpert(expert)}
                       >
                         View Profile →
@@ -173,9 +173,9 @@ export default function FacultyOverview() {
             onClick={() => setSelectedExpert(null)}
           />
           {selectedExpert && (
-            <div className="relative bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 mx-2 md:mx-0 overflow-hidden">
+            <div className="relative bg-[#EBEDFA] rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 mx-2 md:mx-0 overflow-hidden">
               <div className="flex flex-col md:flex-row h-full">
-                <div className="md:w-2/5 w-full bg-slate-100">
+                <div className="md:w-2/5 w-full bg-[#EBEDFA]">
                   <img
                     src={selectedExpert.image}
                     alt={selectedExpert.name}
@@ -185,27 +185,27 @@ export default function FacultyOverview() {
                 <div className="md:w-3/5 w-full p-8 md:p-12 flex flex-col relative">
                   <button
                     onClick={() => setSelectedExpert(null)}
-                    className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-all duration-200 text-xl font-bold z-10"
+                    className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-gray-100 text-gray-700 hover:text-black transition-all duration-200 text-xl font-bold z-10"
                   >
                     ×
                   </button>
                   <div className="mb-6 mt-4 md:mt-0">
-                    <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">
+                    <h3 className="text-3xl md:text-4xl font-semibold text-blue-900 mb-3">
                       {selectedExpert.name}
                     </h3>
-                    <div className="w-16 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mb-4 rounded-full"></div>
-                    <p className="text-xl text-blue-600 font-bold">{selectedExpert.title}</p>
+                    <div className="w-16 h-1.5 bg-black mb-4 rounded-full"></div>
+                    <p className="text-xl text-black font-semibold">{selectedExpert.title}</p>
                   </div>
                   <div className="flex-1 mb-6">
-                    <p className="text-slate-600 leading-relaxed text-lg">
+                    <p className="text-gray-700 leading-relaxed text-[15px] font-normal">
                       {selectedExpert.description}
                     </p>
                   </div>
-                  <div className="flex gap-4 mt-auto">
-                    <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-colors">
+                  <div className="flex gap-4 mt-auto flex-wrap">
+                    <button className="flex-1 bg-[#191313] hover:bg-black text-[#EBEDFA] font-bold py-3 px-6 rounded-full transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300">
                       Connect on LinkedIn
                     </button>
-                    <button className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 px-6 rounded-xl transition-colors">
+                    <button className="flex-1 bg-white hover:bg-gray-100 text-black font-bold py-3 px-6 rounded-full transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300">
                       View Portfolio
                     </button>
                   </div>

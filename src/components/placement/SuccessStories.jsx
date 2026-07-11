@@ -38,12 +38,12 @@ export default function SuccessStories() {
   ];
 
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-24 bg-white font-sans relative">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-purple-600 font-bold tracking-wider uppercase text-sm mb-4 block">Hall of Fame</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Student Success Stories</h2>
+          <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Hall of Fame</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 tracking-tight">Student Success Stories</h2>
           <p className="text-lg text-slate-600">
             Real stories from our alumni who transformed their dreams into reality.
           </p>
@@ -53,7 +53,7 @@ export default function SuccessStories() {
           {stories.map((story, idx) => (
             <div 
               key={idx} 
-              className="relative rounded-3xl overflow-hidden h-[450px] group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="relative rounded-[2rem] overflow-hidden h-[450px] group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-blue-500/30"
             >
               {/* Background Image */}
               <img 
@@ -68,7 +68,7 @@ export default function SuccessStories() {
               {/* Content Box */}
               <div className="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end h-full">
                 
-                <div className="mb-4 text-purple-400 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="mb-4 text-blue-400 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                   <FaQuoteLeft className="text-3xl" />
                 </div>
                 

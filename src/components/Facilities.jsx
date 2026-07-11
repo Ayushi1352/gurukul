@@ -29,7 +29,7 @@ export default function Facilities() {
   return (
     <section className="py-24 bg-slate-50 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">Campus Infrastructure</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">World-Class IT Facilities</h2>
@@ -41,25 +41,23 @@ export default function Facilities() {
             const isEven = idx % 2 === 0;
             return (
               <div key={idx} className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 items-center`}>
-                
+
                 {/* Image Side */}
                 <div className="w-full md:w-1/2 relative group">
                   {/* Decorative background block */}
                   <div className={`absolute inset-0 rounded-[2rem] transform ${isEven ? '-rotate-3 translate-x-4 bg-blue-100' : 'rotate-3 -translate-x-4 bg-purple-100'} transition-transform duration-500 group-hover:rotate-0 group-hover:translate-x-0`}></div>
-                  
+
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white h-[350px] md:h-[450px]">
                     <img src={fac.img} alt={fac.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
                   </div>
                 </div>
-                
+
                 {/* Text Side */}
                 <div className="w-full md:w-1/2 lg:px-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-lg mb-6">
-                    {fac.icon}
-                  </div>
-                  <div className="block mb-4">
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-slate-200/50 text-slate-700 text-xs font-bold tracking-widest uppercase">
+
+                  <div className="block mb-2">
+                    <span className="inline-block px-1 text-blue-600 text-xs font-bold tracking-widest uppercase">
                       {fac.badge}
                     </span>
                   </div>

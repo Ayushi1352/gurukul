@@ -11,12 +11,12 @@ export default function PlacementGallery() {
   ];
 
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-24 bg-[#EBEDFA] font-sans relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">Glimpses</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Placement Gallery</h2>
+          <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Glimpses</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 tracking-tight">Placement Gallery</h2>
           <p className="text-lg text-slate-600">
             A sneak peek into our mega placement drives, corporate seminars, and joyful moments of our placed candidates.
           </p>
@@ -24,7 +24,7 @@ export default function PlacementGallery() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {images.map((img, idx) => (
-            <div key={idx} className="relative group overflow-hidden rounded-2xl shadow-sm aspect-video cursor-pointer">
+            <div key={idx} className="relative group overflow-hidden rounded-[2rem] shadow-sm aspect-video cursor-pointer border border-transparent hover:border-blue-500/30">
               <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/40 transition-colors duration-300 z-10"></div>
               <img 
                 src={img} 

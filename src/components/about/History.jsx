@@ -108,7 +108,7 @@ export default function History() {
   const lineHeight = ((activeStep + 1) / steps.length) * 100;
 
   return (
-    <section className="relative min-h-screen bg-slate-50 border-t border-slate-100 py-24 px-4 sm:px-6 md:px-8 lg:px-16 overflow-hidden">
+    <section className="relative min-h-screen bg-white py-24 px-4 sm:px-6 md:px-8 lg:px-16 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(15)].map((_, i) => (
@@ -148,18 +148,10 @@ export default function History() {
 
           <div className="hidden md:flex items-center justify-center lg:justify-end">
             <div className="text-center lg:text-right max-w-md">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-                  INSTITUTE
-                </span>
-                <br />
-                <span className="text-slate-900">
-                  HISTORY
-                </span>
-                <br />
-                <span className="text-slate-900">
-                  TIMELINE
-                </span>
+              <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-blue-900 tracking-tight leading-[1.1]">
+                Institute<br />
+                History &amp;<br />
+                Timeline
               </h2>
             </div>
           </div>
@@ -192,9 +184,9 @@ export default function History() {
                 {/* Content Card */}
                 <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
                   <div
-                    className={`relative ${step.cardBg} rounded-2xl p-6 md:p-8 border border-white transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-1 ${activeStep === index
-                      ? 'shadow-xl -translate-y-1 scale-[1.02] border-2 border-slate-200'
-                      : 'shadow-md'
+                    className={`relative bg-[#EBEDFA] rounded-3xl p-6 md:p-8 transition-all duration-700 ease-out hover:shadow-2xl hover:-translate-y-2 ${activeStep === index
+                      ? 'shadow-2xl -translate-y-2 scale-[1.02]'
+                      : 'shadow-xl shadow-slate-200/40'
                       }`}
                   >
                     <div
@@ -203,7 +195,7 @@ export default function History() {
                     />
 
                     {activeStep === index && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-50 rounded-2xl transition-all duration-300 ease-out"></div>
+                      <div className="absolute inset-0 bg-white/30 rounded-3xl transition-all duration-300 ease-out"></div>
                     )}
 
                     <div className="pl-6 relative z-10">
@@ -221,14 +213,14 @@ export default function History() {
                               <span className="text-sm font-normal animate-pulse hidden sm:inline">●</span>
                             )}
                           </span>
-                          <h3 className={`text-xl md:text-2xl font-bold text-slate-900 mt-1 transition-all duration-300 ease-out ${activeStep === index ? 'translate-x-1' : ''
+                          <h3 className={`text-xl md:text-2xl font-semibold text-blue-900 mt-1 transition-all duration-300 ease-out ${activeStep === index ? 'translate-x-1' : ''
                             } truncate`}>
                             {step.title}
                           </h3>
                         </div>
                       </div>
 
-                      <p className={`text-slate-600 mb-4 leading-relaxed text-base transition-all duration-300 ease-out ${activeStep === index ? 'text-slate-900' : ''
+                      <p className={`text-gray-700 mb-4 leading-relaxed text-[15px] font-normal transition-all duration-300 ease-out ${activeStep === index ? 'text-black' : ''
                         }`}>
                         {step.desc}
                       </p>
@@ -311,15 +303,15 @@ export default function History() {
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="bg-[#EBEDFA] rounded-3xl p-6 shadow-xl shadow-slate-200/40 transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 group"
             >
-              <div className="text-3xl md:text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
+              <div className="text-3xl md:text-4xl font-semibold text-blue-900 mb-2 group-hover:scale-105 transition-transform duration-300 inline-block">
                 {stat.value}
               </div>
-              <div className="text-lg font-bold text-slate-900 truncate">
+              <div className="text-lg font-semibold text-black truncate">
                 {stat.label}
               </div>
-              <div className="text-sm text-slate-500 mt-1 line-clamp-2">
+              <div className="text-[15px] text-gray-700 mt-1 line-clamp-2">
                 {stat.desc}
               </div>
             </div>

@@ -3,8 +3,8 @@ import React from 'react';
 
 export default function HeroBanner() {
   return (
-    <div className="w-full lg:px-4 lg:pb-4 xl:px-6 xl:pb-6 pt-3">
-      <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-900 via-blue-950 to-[#0a1128] lg:rounded-[3rem] min-h-[100svh] lg:min-h-[85vh] flex items-center pt-20 lg:pt-24 pb-16 lg:pb-0">
+    <div className="w-full">
+      <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-900 via-blue-950 to-[#0a1128] min-h-[100svh] lg:min-h-[85vh] flex items-center pt-20 lg:pt-24 pb-16 lg:pb-0">
 
         {/* Subtle Background Glows */}
         <div className="absolute inset-0 z-0 pointer-events-none">

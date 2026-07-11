@@ -5,7 +5,7 @@ import { FaImage, FaArrowRight } from 'react-icons/fa';
 export default function GalleryHero() {
   return (
     <section
-      className="relative w-full bg-slate-950 font-sans overflow-hidden py-24 lg:py-40 border-b border-slate-800 min-h-[100vh] lg:min-h-[110vh]"
+      className="relative w-full bg-slate-950 font-sans overflow-hidden py-24 lg:py-36 border-b border-slate-800"
       style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')",
         backgroundSize: 'cover',
@@ -25,7 +25,7 @@ export default function GalleryHero() {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 flex flex-col items-start mt-16 lg:mt-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start">
 
         {/* Top Pill Badge */}
         <div className="flex items-center gap-3 bg-slate-900/80 border border-slate-700/50 rounded-full p-1.5 pr-5 mb-8 backdrop-blur-md shadow-2xl">

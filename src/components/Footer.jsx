@@ -49,11 +49,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6 text-lg">Top IT Courses</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/courses/web-development" className="hover:text-purple-400 transition-colors">Web Development</Link></li>
-              <li><Link href="/courses/graphic-design" className="hover:text-purple-400 transition-colors">UI/UX & Design</Link></li>
-              <li><Link href="/courses/digital-marketing" className="hover:text-purple-400 transition-colors">Digital Marketing</Link></li>
-              <li><Link href="/courses/data-science" className="hover:text-purple-400 transition-colors">Data Science</Link></li>
-              <li><Link href="/courses/cyber-security" className="hover:text-purple-400 transition-colors">Cyber Security</Link></li>
+              <li><Link href="/courses/full-stack-web-development" className="hover:text-purple-400 transition-colors">Full Stack Web Development</Link></li>
+              <li><Link href="/courses/ui-ux-graphic-design" className="hover:text-purple-400 transition-colors">UI/UX & Graphic Design</Link></li>
+              <li><Link href="/courses/digital-marketing-pro" className="hover:text-purple-400 transition-colors">Digital Marketing Pro</Link></li>
+              <li><Link href="/courses/data-science-ai" className="hover:text-purple-400 transition-colors">Data Science & AI</Link></li>
+              <li><Link href="/courses/cyber-security-ethical-hacking" className="hover:text-purple-400 transition-colors">Cyber Security & Ethical Hacking</Link></li>
             </ul>
           </div>
 

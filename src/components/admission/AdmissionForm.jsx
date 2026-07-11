@@ -22,7 +22,7 @@ export default function AdmissionForm() {
   };
 
   return (
-    <section id="admission-form" className="py-24 bg-[#f6f6f8] font-sans relative">
+    <section id="admission-form" className="py-24 bg-white font-sans relative">
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-12 lg:gap-16">
 
         {/* Top Split Area */}
@@ -41,19 +41,19 @@ export default function AdmissionForm() {
               {/* Feature List matching screenshot */}
               <div className="space-y-5 mb-12">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0 shadow-md">
                     <FaHistory className="text-sm" />
                   </div>
                   <span className="text-slate-800 font-semibold">24 hours reply time</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0 shadow-md">
                     <FaHeadset className="text-sm" />
                   </div>
                   <span className="text-slate-800 font-semibold">Personal assistance</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0 shadow-md">
                     <FaUserCheck className="text-sm" />
                   </div>
                   <span className="text-slate-800 font-semibold">Expert academic counselors</span>
@@ -147,7 +147,7 @@ export default function AdmissionForm() {
                 <div className="p-1.5 rounded-[1.25rem] border border-slate-300 bg-transparent mt-8">
                   <button
                     type="submit"
-                    className="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-lg rounded-xl transition-colors duration-300 shadow-md flex items-center justify-center"
+                    className="w-full py-4 bg-[#191313] hover:bg-black text-white font-semibold text-lg rounded-xl transition-colors duration-300 shadow-md flex items-center justify-center"
                   >
                     Submit Application
                   </button>
@@ -162,8 +162,8 @@ export default function AdmissionForm() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
 
           {/* Card 1: Email */}
-          <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-            <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+          <div className="bg-[#EBEDFA] border border-transparent hover:border-blue-500/30 rounded-[2rem] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-blue-950 transition-all duration-300">
               <FaEnvelope />
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-2">Email Address</h4>
@@ -171,8 +171,8 @@ export default function AdmissionForm() {
           </div>
 
           {/* Card 2: Call */}
-          <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-            <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+          <div className="bg-[#EBEDFA] border border-transparent hover:border-blue-500/30 rounded-[2rem] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-blue-950 transition-all duration-300">
               <FaPhoneAlt />
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-2">Call Us Now</h4>
@@ -180,8 +180,8 @@ export default function AdmissionForm() {
           </div>
 
           {/* Card 3: Location */}
-          <div className="bg-white/70 backdrop-blur-xl border-2 border-white hover:border-purple-500 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(147,51,234,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-            <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-purple-700 transition-all duration-300">
+          <div className="bg-[#EBEDFA] border border-transparent hover:border-blue-500/30 rounded-[2rem] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-6 text-xl shadow-md group-hover:scale-110 group-hover:bg-blue-950 transition-all duration-300">
               <FaMapMarkerAlt />
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-2">Our Campus</h4>

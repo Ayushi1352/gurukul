@@ -6,30 +6,30 @@ export default function PlacementStats() {
     {
       value: "98%",
       label: "Placement Rate",
-      icon: <FaChartLine className="text-cyan-300" />
+      icon: <FaChartLine className="text-white" />
     },
     {
       value: "5000+",
       label: "Alumni Placed",
-      icon: <FaUsers className="text-pink-300" />
+      icon: <FaUsers className="text-white" />
     },
     {
       value: "200+",
       label: "Recruiting Partners",
-      icon: <FaBuilding className="text-emerald-300" />
+      icon: <FaBuilding className="text-white" />
     },
     {
       value: "15 LPA",
       label: "Highest Package",
-      icon: <FaRupeeSign className="text-amber-300" />
+      icon: <FaRupeeSign className="text-white" />
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-950 to-[#0a1128] font-sans relative overflow-hidden">
       {/* Decorative Overlays */}
-      <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

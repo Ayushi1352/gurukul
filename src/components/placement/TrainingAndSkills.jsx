@@ -33,11 +33,11 @@ export default function TrainingAndSkills() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-indigo-50 to-white relative">
+    <section className="py-24 bg-[#EBEDFA] font-sans relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Interactive Skill Development</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 tracking-tight">Interactive Skill Development</h2>
           <p className="text-lg text-slate-600">
             We don't just teach theory; we actively prepare you for the corporate battleground.
           </p>
@@ -51,22 +51,22 @@ export default function TrainingAndSkills() {
               <button
                 key={idx}
                 onClick={() => setActiveTab(idx)}
-                className={`text-left p-6 rounded-2xl transition-all duration-300 flex items-center gap-6 ${
+                className={`text-left p-6 rounded-[2rem] transition-all duration-300 flex items-center gap-6 ${
                   activeTab === idx 
-                    ? 'bg-purple-600 text-white shadow-xl shadow-purple-200 scale-105' 
-                    : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-100'
+                    ? 'bg-blue-900 text-white shadow-xl shadow-blue-900/20 scale-105' 
+                    : 'bg-white text-slate-600 hover:bg-slate-50 border border-transparent hover:border-blue-500/30'
                 }`}
               >
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl shrink-0 ${
-                  activeTab === idx ? 'bg-white/20 text-white' : 'bg-slate-100 text-purple-600'
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shrink-0 ${
+                  activeTab === idx ? 'bg-white/20 text-white' : 'bg-[#EBEDFA] text-blue-900'
                 }`}>
                   {skill.icon}
                 </div>
                 <div>
-                  <h3 className={`text-xl font-bold mb-1 ${activeTab === idx ? 'text-white' : 'text-slate-900'}`}>
+                  <h3 className={`text-xl font-bold mb-1 ${activeTab === idx ? 'text-white' : 'text-blue-900'}`}>
                     {skill.title}
                   </h3>
-                  <p className={`text-sm ${activeTab === idx ? 'text-purple-100' : 'text-slate-500'} line-clamp-1`}>
+                  <p className={`text-sm ${activeTab === idx ? 'text-blue-100' : 'text-slate-500'} line-clamp-1`}>
                     Click to view details
                   </p>
                 </div>
@@ -85,7 +85,7 @@ export default function TrainingAndSkills() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
               
               <div className="absolute bottom-0 left-0 w-full p-10 transform transition-all duration-500">
-                <div className="w-16 h-16 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-3xl mb-6 shadow-lg">
+                <div className="w-16 h-16 rounded-2xl bg-blue-900 text-white flex items-center justify-center text-3xl mb-6 shadow-lg">
                   {skills[activeTab].icon}
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">{skills[activeTab].title}</h3>
