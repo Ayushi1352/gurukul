@@ -31,8 +31,8 @@ export default function AdmissionForm() {
           {/* Left Content */}
           <div className="flex-1 flex flex-col justify-between pt-4">
             <div>
-              <h2 className="text-[3.5rem] lg:text-[4.5rem] font-bold text-slate-900 mb-6 tracking-tight leading-[1.05]">
-                Start Your <br className="hidden lg:block" /> Application
+              <h2 className="text-4xl sm:text-[3.5rem] lg:text-[4.5rem] font-bold text-slate-900 mb-6 tracking-tight leading-[1.05]">
+                Start Your Tech Career
               </h2>
               <p className="text-slate-600 text-lg mb-12 max-w-md leading-relaxed">
                 Fill out the form below to register your interest. Our academic counselors will reach out to guide you through the next steps of the admission process.

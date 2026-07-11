@@ -5,7 +5,7 @@ export default function FeeInformation() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section className="py-24 bg-[#EBEDFA] font-sans relative overflow-hidden">
+    <section id="fee-structure" className="py-24 bg-white relative font-sans overflow-hidden">
 
       {/* Background decorations mimicking the screenshot's dark atmosphere */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-200/50 rounded-full blur-[150px] pointer-events-none"></div>
@@ -20,8 +20,8 @@ export default function FeeInformation() {
           <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Fee Structure</span>
 
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10">
-            <h2 className="text-[2.5rem] md:text-[3.5rem] text-black font-semibold leading-[1.1] max-w-2xl tracking-tight">
-              Transparent & Affordable
+            <h2 className="text-4xl sm:text-[2.5rem] md:text-[3.5rem] text-black font-semibold leading-[1.1] max-w-2xl tracking-tight">
+              Transparent & Affordable Fee Structure
             </h2>
 
             {/* Toggle Switch */}

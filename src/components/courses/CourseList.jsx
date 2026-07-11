@@ -101,7 +101,7 @@ export default function CourseList() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Course Catalog</span>
-          <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 leading-[1.1] tracking-tight">Our Popular IT Courses</h2>
+          <h2 className="text-4xl sm:text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 leading-[1.1] tracking-tight">Our Popular IT Courses</h2>
           <p className="text-lg text-gray-700 font-normal">
             Choose from a wide range of specialized programs designed to launch your career in the tech industry.
           </p>

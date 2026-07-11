@@ -86,7 +86,7 @@ export default function Features() {
         {/* Section Header */}
         <div className={`text-center max-w-3xl mx-auto mb-16 px-4 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
 
-          <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 leading-[1.1] tracking-tight">
+          <h2 className="text-4xl sm:text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 leading-[1.1] tracking-tight">
             Building Your Career with <br className="hidden sm:block" />
             Unmatched Excellence
           </h2>

@@ -14,13 +14,13 @@ export default function ContactFormAndMap() {
   };
 
   return (
-    <section id="contact-form" className="py-24 bg-[#EBEDFA] font-sans relative">
+    <section id="contact-form" className="py-24 bg-[#EBEDFA] font-sans relative overflow-hidden">
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-12 lg:gap-16">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-4">
           <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Connect</span>
-          <h2 className="text-[3.5rem] lg:text-[4rem] font-bold text-black mb-6 tracking-tight leading-[1.05]">
+          <h2 className="text-4xl sm:text-[3.5rem] lg:text-[4rem] font-bold text-black mb-6 tracking-tight leading-[1.05]">
             Drop Us a Message
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">

@@ -11,7 +11,7 @@ export default function InstituteIntroduction() {
           {/* Left Column - Large Serif Text */}
           <div className="w-full lg:w-[35%] flex-shrink-0">
             <h2
-              className="text-[3.5rem] sm:text-[4.5rem] lg:text-[4.8rem] leading-[1.05] font-semibold text-blue-900 tracking-tight"
+              className="text-4xl sm:text-[4.5rem] lg:text-[4.8rem] leading-[1.05] font-semibold text-blue-900 tracking-tight"
             >
               About us and<br /> Education &amp;<br /> Skills quality
             </h2>
