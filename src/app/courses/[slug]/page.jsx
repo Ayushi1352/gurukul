@@ -1,98 +1,308 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaClock, FaGraduationCap, FaCheckCircle, FaBriefcase, FaArrowRight, FaLaptopCode } from 'react-icons/fa';
+import { FaClock, FaGraduationCap, FaCheckCircle, FaBriefcase, FaArrowRight, FaLaptopCode, FaMoneyBillWave } from 'react-icons/fa';
 
 // Mock database of courses mapping exactly to our CourseList
 const courseDetails = {
-  "full-stack-web-development": {
-    name: "Full Stack Web Development",
-    duration: "12 Months",
-    eligibility: "12th Pass / Graduate",
-    description: "Master both front-end and back-end technologies. Build responsive, dynamic web applications from scratch using the MERN stack (MongoDB, Express, React, Node.js). This intensive program is designed to take you from a beginner to a highly employable software engineer with a strong portfolio of real-world projects.",
-    opportunities: ["Frontend Developer", "Backend Engineer", "Full Stack Developer", "UI Developer", "Tech Lead"],
+  "master-in-android-phone-repairing": {
+    name: "Master in Android Phone Repairing",
+    duration: "Flexible",
+    eligibility: "10th Pass",
+    description: "Learn advanced hardware and software troubleshooting for all major Android smartphones. Get practical, hands-on training to repair complex issues like dead phones, network issues, and software flashing.",
+    opportunities: ["Mobile Technician", "Service Center Expert", "Business Owner"],
     modules: [
-      { title: "Module 1: Web Fundamentals", topics: ["HTML5 & CSS3 Deep Dive", "JavaScript ES6+ & Async Programming", "DOM Manipulation & Events", "Responsive UI Design with Tailwind CSS"] },
-      { title: "Module 2: Frontend Mastery", topics: ["React.js Core Concepts & Hooks", "Advanced State Management (Redux/Zustand)", "Next.js & Server-Side Rendering", "API Integration & Data Fetching"] },
-      { title: "Module 3: Backend Development", topics: ["Node.js Architecture", "Express.js Routing & Middleware", "RESTful API Design & GraphQL", "Authentication & JWT Authorization"] },
-      { title: "Module 4: Database & DevOps", topics: ["MongoDB & Mongoose Modeling", "SQL Basics (PostgreSQL)", "Git, GitHub & CI/CD Basics", "Vercel & AWS Deployment"] }
+      { title: "Module 1: Basics of Electronics", topics: ["Multimeter & Basic Components", "SMD Components", "Soldering & Desoldering"] },
+      { title: "Module 2: Hardware Repairing", topics: ["Disassembling & Assembling", "Screen & Touch Replacement", "Charging Port & Mic Repair"] },
+      { title: "Module 3: Advanced Hardware", topics: ["Motherboard Tracing", "IC Replacement", "Water Damage Repair"] },
+      { title: "Module 4: Software Repairing", topics: ["Flashing & Unlocking", "FRP Bypass", "Software Tools & Boxes"] }
     ],
     theme: "blue",
-    heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023937/Master_in_Android_Phone_Repairing_jilqer.avif"
   },
-  "digital-marketing-pro": {
-    name: "Digital Marketing Pro",
-    duration: "6 Months",
-    eligibility: "10th / 12th Pass",
-    description: "Learn SEO, Social Media Marketing, Google Ads, and advanced content strategies to dominate the digital landscape and drive massive traffic. Become an expert in driving growth, analyzing performance metrics, and creating compelling digital campaigns that convert.",
-    opportunities: ["SEO Specialist", "Social Media Manager", "Digital Marketer", "Content Strategist", "Performance Marketer"],
+  "expert-in-smartphone-repairing": {
+    name: "Expert in Smartphone Repairing",
+    duration: "Flexible",
+    eligibility: "10th Pass",
+    description: "Become an expert at diagnosing and fixing complex smartphone issues, including circuit tracing and component replacement.",
+    opportunities: ["Smartphone Expert", "Business Owner", "Senior Technician"],
     modules: [
-      { title: "Module 1: Marketing Fundamentals", topics: ["Digital Marketing Landscape Overview", "Creating Buyer Personas", "Market Research & Competitor Analysis", "Brand Positioning"] },
-      { title: "Module 2: SEO & Content Strategy", topics: ["On-page & Off-page SEO", "Technical SEO & Core Web Vitals", "Keyword Research Mastery", "Google Analytics 4 & Search Console"] },
-      { title: "Module 3: Social Media Mastery", topics: ["Facebook & Instagram Ads Manager", "LinkedIn B2B Marketing", "Content Calendars & Scheduling", "Community Management"] },
-      { title: "Module 4: Performance Marketing", topics: ["Google Ads (Search, Display, Video)", "Email Marketing & Automation", "Conversion Rate Optimization (CRO)", "ROI Tracking & Reporting"] }
+      { title: "Module 1: Smartphone Architecture", topics: ["Block Diagrams", "Schematic Reading", "Fault Finding"] },
+      { title: "Module 2: Advanced IC Repair", topics: ["Power IC & CPU Reballing", "eMMC/UFS Programming", "Dead Boot Repair"] },
+      { title: "Module 3: Software & Flashing", topics: ["Advanced Flashing", "Country Unlock", "Data Recovery"] },
+      { title: "Module 4: Business Setup", topics: ["Shop Setup & Tools", "Customer Handling", "Spare Parts Sourcing"] }
     ],
     theme: "purple",
-    heroImage: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop"
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784024181/Expert_in_Smartphone_Repairing_2_pr2hoj.avif"
   },
-  "ui-ux-graphic-design": {
-    name: "UI/UX & Graphic Design",
-    duration: "6 Months",
-    eligibility: "10th / 12th Pass",
-    description: "Transform ideas into stunning visual experiences. Master industry-standard tools like Figma, Adobe Illustrator, and Photoshop to create user-centric designs. Learn the psychology of colors, typography, and human-computer interaction to build applications people love.",
-    opportunities: ["UI/UX Designer", "Graphic Designer", "Creative Director", "Product Designer", "Web Designer"],
+  "specialist-in-iphone-repairing": {
+    name: "Specialist in iPhone Repairing",
+    duration: "Flexible",
+    eligibility: "10th Pass",
+    description: "Master Apple iPhone hardware and software repairing. Learn iOS troubleshooting, screen replacement, and micro-soldering for all iPhone models.",
+    opportunities: ["iPhone Specialist", "Premium Technician", "Apple Service Expert"],
     modules: [
-      { title: "Module 1: Design Fundamentals", topics: ["Color Theory & Typography", "Visual Hierarchy & Layouting", "Design Psychology", "Introduction to Adobe Suite"] },
-      { title: "Module 2: Graphic Design Mastery", topics: ["Logo & Branding Design", "Vector Illustration (Illustrator)", "Photo Manipulation (Photoshop)", "Print & Digital Media Assets"] },
-      { title: "Module 3: UI Design & Prototyping", topics: ["Figma Mastery", "Wireframing & Mockups", "Interactive Prototyping", "Design Systems & Components"] },
-      { title: "Module 4: UX Research & Strategy", topics: ["User Journey Mapping", "Usability Testing & Feedback", "Information Architecture", "Portfolio Building"] }
+      { title: "Module 1: iPhone Basics", topics: ["iOS Ecosystem", "Disassembling iPhones", "Battery & Screen Replacement"] },
+      { title: "Module 2: Motherboard Repair", topics: ["Face ID Repair", "Audio IC Issue", "Baseband/Network Repair"] },
+      { title: "Module 3: Micro-Soldering", topics: ["NAND Upgrade", "CPU Reballing", "Traces & Jumpers"] },
+      { title: "Module 4: Software & Tools", topics: ["iTunes & 3uTools", "DFU Mode & Restore", "iCloud Basics"] }
     ],
     theme: "pink",
-    heroImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop"
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023937/Expert_in_Smartphone_Repairing_o7hrpz.avif"
   },
-  "data-science-ai": {
-    name: "Data Science & AI",
-    duration: "12 Months",
-    eligibility: "Graduate (Math/Science)",
-    description: "Dive deep into Python programming, Machine Learning algorithms, Data Visualization, and Artificial Intelligence to solve complex data problems. Equip yourself with the analytical and engineering skills needed to thrive in the era of Big Data.",
-    opportunities: ["Data Analyst", "Machine Learning Engineer", "Data Scientist", "AI Researcher", "Business Intelligence Analyst"],
+  "laptop-hardware-software-engineer": {
+    name: "Laptop Hardware & Software Engineer",
+    duration: "Flexible",
+    eligibility: "10th Pass / 12th Pass",
+    description: "Comprehensive training to become a skilled Laptop Hardware & Software engineer. Cover all brands and operating systems.",
+    opportunities: ["Laptop Engineer", "IT Support", "Hardware Specialist"],
     modules: [
-      { title: "Module 1: Python & Statistics", topics: ["Advanced Python Programming", "Probability & Statistics", "Data Structures & Algorithms", "Numpy & Pandas for Data Manipulation"] },
-      { title: "Module 2: Data Visualization", topics: ["Matplotlib & Seaborn", "Tableau & PowerBI Dashboards", "Exploratory Data Analysis (EDA)", "Data Storytelling"] },
-      { title: "Module 3: Machine Learning", topics: ["Supervised & Unsupervised Learning", "Regression & Classification Models", "Decision Trees & Random Forests", "Model Evaluation & Tuning"] },
-      { title: "Module 4: Deep Learning & AI", topics: ["Neural Networks Basics", "TensorFlow & PyTorch", "Natural Language Processing (NLP)", "Computer Vision Fundamentals"] }
+      { title: "Module 1: Laptop Anatomy", topics: ["Identifying Components", "Disassembling Laptops", "Keyboard & Panel Replacement"] },
+      { title: "Module 2: Hardware Upgrades", topics: ["RAM & SSD Upgrades", "Hinge & Body Repair", "Cooling System Service"] },
+      { title: "Module 3: Software Installation", topics: ["Windows & Linux OS", "Drivers & Utilities", "Virus Removal"] },
+      { title: "Module 4: Basic Troubleshooting", topics: ["No Display Issues", "Power Issues", "Wi-Fi & Bluetooth Fixes"] }
     ],
     theme: "emerald",
-    heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+    heroImage: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=2070&auto=format&fit=crop"
   },
-  "cyber-security-ethical-hacking": {
-    name: "Cyber Security & Ethical Hacking",
-    duration: "8 Months",
-    eligibility: "12th Pass / Basic IT",
-    description: "Protect systems and networks from digital attacks. Learn penetration testing, network security, threat analysis, and advanced cryptography. Become the digital shield for organizations in an increasingly vulnerable cyber landscape.",
-    opportunities: ["Security Analyst", "Ethical Hacker", "Network Security Engineer", "Penetration Tester", "Cyber Security Consultant"],
+  "adfa-advance-diploma-in-financial-accounting": {
+    name: "ADFA (Advance Diploma in Financial Accounting)",
+    duration: "6 Months",
+    eligibility: "12th Pass / Graduate",
+    description: "Advanced diploma covering modern financial accounting practices, taxation, and business accounting software.",
+    opportunities: ["Accountant", "Finance Executive", "Tax Consultant"],
     modules: [
-      { title: "Module 1: Networking Basics", topics: ["OSI & TCP/IP Models", "IP Subnetting & Routing", "Network Protocols (HTTP, DNS, FTP)", "Packet Analysis with Wireshark"] },
-      { title: "Module 2: Security Fundamentals", topics: ["Cryptography Basics", "Linux Administration for Hackers", "Windows Security & Active Directory", "Threats, Vulnerabilities & Exploits"] },
-      { title: "Module 3: Ethical Hacking", topics: ["Information Gathering & Reconnaissance", "Network Scanning & Enumeration", "System Hacking & Metasploit", "Web Application Penetration Testing"] },
-      { title: "Module 4: Advanced Defense", topics: ["Firewalls, IDS & IPS", "Incident Response & Forensics", "Malware Analysis Basics", "Security Auditing & Compliance"] }
+      { title: "Module 1: Manual Accounting", topics: ["Journal & Ledger", "Trial Balance", "Final Accounts"] },
+      { title: "Module 2: Tally & ERP", topics: ["Company Creation", "Voucher Entry", "Inventory Management"] },
+      { title: "Module 3: Taxation", topics: ["GST Concepts", "TDS & TCS", "Income Tax Basics"] },
+      { title: "Module 4: Advanced Tools", topics: ["Advance Excel for Finance", "Payroll Management", "Audit Preparation"] }
     ],
     theme: "rose",
-    heroImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop"
+    heroImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop"
   },
-  "hardware-networking": {
-    name: "Hardware & Networking",
-    duration: "6 Months",
-    eligibility: "10th Pass",
-    description: "Get hands-on experience with computer hardware assembling, operating system installation, network configuration, and advanced troubleshooting. Build the foundational infrastructure skills required by every IT department.",
-    opportunities: ["IT Support Specialist", "Network Administrator", "Hardware Technician", "System Administrator", "Cloud Support Associate"],
+  "computer-basic": {
+    name: "Computer Basic",
+    duration: "3 Months",
+    eligibility: "Anyone",
+    description: "Learn the fundamentals of computers, operating systems, internet usage, and basic office applications.",
+    opportunities: ["Data Entry", "Office Assistant", "Receptionist"],
     modules: [
-      { title: "Module 1: Computer Hardware", topics: ["PC Architecture & Motherboards", "Processors, RAM & Storage Devices", "Assembling & Disassembling PCs", "Hardware Troubleshooting & BIOS"] },
-      { title: "Module 2: Operating Systems", topics: ["Windows 10/11 Installation & config", "Linux Fundamentals (Ubuntu/CentOS)", "Driver Installation & Updates", "OS Troubleshooting & Recovery"] },
-      { title: "Module 3: Networking Fundamentals", topics: ["Cabling & Network Topologies", "Switches, Routers & Modems", "IP Addressing & Subnetting", "Wireless Networking setup"] },
-      { title: "Module 4: Server & Cloud Basics", topics: ["Windows Server Setup", "Active Directory & Group Policies", "Basic Cloud Computing (AWS/Azure)", "Network Security & Firewalls"] }
+      { title: "Module 1: Intro to Computers", topics: ["Hardware & Software Basics", "Windows OS", "File Management"] },
+      { title: "Module 2: MS Office", topics: ["MS Word", "MS Excel Basics", "MS PowerPoint"] },
+      { title: "Module 3: Internet & Email", topics: ["Web Browsing", "Email Etiquette", "Online Security Basics"] },
+      { title: "Module 4: Typing & Tools", topics: ["Touch Typing", "Google Workspace", "Basic Troubleshooting"] }
     ],
     theme: "cyan",
-    heroImage: "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?q=80&w=2070&auto=format&fit=crop"
+    heroImage: "https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=2070&auto=format&fit=crop"
+  },
+  "tally-erp-9": {
+    name: "Tally.ERP 9",
+    duration: "3 Months",
+    eligibility: "10th / 12th Pass",
+    description: "Master one of the most popular accounting software. Learn voucher entry, inventory management, and GST.",
+    opportunities: ["Tally Operator", "Account Assistant", "Billing Clerk"],
+    modules: [
+      { title: "Module 1: Tally Basics", topics: ["Company Setup", "Ledger Creation", "Accounting Vouchers"] },
+      { title: "Module 2: Inventory", topics: ["Stock Groups & Items", "Purchase & Sales Orders", "Godown Management"] },
+      { title: "Module 3: Taxation in Tally", topics: ["Enabling GST", "GST Invoicing", "E-Way Bills"] },
+      { title: "Module 4: Reporting", topics: ["Balance Sheet", "P&L Statement", "Bank Reconciliation"] }
+    ],
+    theme: "blue",
+    heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop"
+  },
+  "advance-excel": {
+    name: "Advance Excel",
+    duration: "2 Months",
+    eligibility: "10th Pass",
+    description: "Dive deep into pivot tables, VLOOKUP, macros, and advanced data analysis techniques in Microsoft Excel.",
+    opportunities: ["MIS Executive", "Data Analyst", "Operations Executive"],
+    modules: [
+      { title: "Module 1: Excel Essentials", topics: ["Formatting & Conditional Formatting", "Data Validation", "Sorting & Filtering"] },
+      { title: "Module 2: Formulas & Functions", topics: ["VLOOKUP/HLOOKUP", "Logical & Text Functions", "Date & Math Functions"] },
+      { title: "Module 3: Data Analysis", topics: ["Pivot Tables", "What-If Analysis", "Charts & Dashboards"] },
+      { title: "Module 4: Automation", topics: ["Introduction to Macros", "VBA Basics", "Data Import/Export"] }
+    ],
+    theme: "emerald",
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023957/Advance_Excel_za4gut.avif"
+  },
+  "web-development": {
+    name: "Web Development",
+    duration: "4 Months",
+    eligibility: "12th Pass",
+    description: "Learn modern web development technologies to build responsive, dynamic web applications from scratch.",
+    opportunities: ["Web Developer", "Frontend Engineer", "Freelancer"],
+    modules: [
+      { title: "Module 1: Frontend Basics", topics: ["HTML5", "CSS3 & Flexbox", "Bootstrap"] },
+      { title: "Module 2: JavaScript", topics: ["Variables & Functions", "DOM Manipulation", "ES6 Features"] },
+      { title: "Module 3: Advanced Frontend", topics: ["React.js Basics", "State Management", "API Integration"] },
+      { title: "Module 4: Backend & DB Basics", topics: ["Node.js Intro", "Express Server", "MongoDB Basics"] }
+    ],
+    theme: "purple",
+    heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070&auto=format&fit=crop"
+  },
+  "graphic-designing": {
+    name: "Graphic Designing",
+    duration: "3 Months",
+    eligibility: "10th Pass",
+    description: "Transform ideas into stunning visual experiences using industry-standard tools like Photoshop and Illustrator.",
+    opportunities: ["Graphic Designer", "Creative Artist", "UI Designer"],
+    modules: [
+      { title: "Module 1: Design Theory", topics: ["Color Theory", "Typography", "Composition"] },
+      { title: "Module 2: Adobe Photoshop", topics: ["Layers & Masks", "Photo Retouching", "Poster Design"] },
+      { title: "Module 3: Adobe Illustrator", topics: ["Vector Graphics", "Logo Design", "Illustration Techniques"] },
+      { title: "Module 4: Layout & UI", topics: ["InDesign Basics", "Figma Intro", "Portfolio Creation"] }
+    ],
+    theme: "pink",
+    heroImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2070&auto=format&fit=crop"
+  },
+  "c-c": {
+    name: "C & C++",
+    duration: "3 Months",
+    eligibility: "12th Pass",
+    description: "Build a strong programming foundation. Learn procedural and object-oriented programming with C and C++.",
+    opportunities: ["Software Developer", "Programmer", "System Engineer"],
+    modules: [
+      { title: "Module 1: C Fundamentals", topics: ["Data Types & Operators", "Control Statements", "Functions & Arrays"] },
+      { title: "Module 2: Advanced C", topics: ["Pointers", "Structures & Unions", "File Handling"] },
+      { title: "Module 3: C++ OOP Concepts", topics: ["Classes & Objects", "Inheritance", "Polymorphism"] },
+      { title: "Module 4: Advanced C++", topics: ["Templates", "Exception Handling", "STL Basics"] }
+    ],
+    theme: "blue",
+    heroImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop"
+  },
+  "digital-marketing": {
+    name: "Digital Marketing",
+    duration: "4 Months",
+    eligibility: "12th Pass",
+    description: "Learn SEO, Social Media Marketing, and ad campaigns to dominate the digital landscape and drive traffic.",
+    opportunities: ["Digital Marketer", "SEO Expert", "Social Media Manager"],
+    modules: [
+      { title: "Module 1: SEO", topics: ["On-page Optimization", "Off-page SEO", "Keyword Research"] },
+      { title: "Module 2: Social Media", topics: ["Facebook & IG Ads", "Organic Growth", "Content Calendar"] },
+      { title: "Module 3: Search Engine Marketing", topics: ["Google Ads", "PPC Campaigns", "Analytics"] },
+      { title: "Module 4: Email & Content", topics: ["Email Campaigns", "Blogging Strategies", "Lead Generation"] }
+    ],
+    theme: "rose",
+    heroImage: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2070&auto=format&fit=crop"
+  },
+  "english-speaking-personality-development": {
+    name: "English Speaking & Personality Development",
+    duration: "3 Months",
+    eligibility: "Anyone",
+    description: "Improve your communication skills, build confidence, and develop a strong professional personality.",
+    opportunities: ["Customer Executive", "Corporate Professional", "Sales Rep"],
+    modules: [
+      { title: "Module 1: Spoken English Basics", topics: ["Grammar Fundamentals", "Vocabulary Building", "Pronunciation"] },
+      { title: "Module 2: Advanced Communication", topics: ["Public Speaking", "Group Discussions", "Debates"] },
+      { title: "Module 3: Personality Grooming", topics: ["Body Language", "Dressing Sense", "Confidence Building"] },
+      { title: "Module 4: Professional Skills", topics: ["Interview Preparation", "Resume Writing", "Email Etiquette"] }
+    ],
+    theme: "cyan",
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023114/English_Speaking_Personality_Development_ux11xx.avif"
+  },
+  "laptop-card-level-engineering": {
+    name: "Laptop (Card Level) Engineering",
+    duration: "3 Months",
+    eligibility: "10th Pass",
+    description: "Focus on card-level laptop repair. Learn to identify and replace faulty modules, RAM, hard drives, and screens.",
+    opportunities: ["Hardware Technician", "IT Support", "Service Engineer"],
+    modules: [
+      { title: "Module 1: Laptop Assembly", topics: ["Disassembling Procedures", "Identifying Internal Parts", "Screen Replacement"] },
+      { title: "Module 2: Upgrades", topics: ["RAM Upgrades", "HDD to SSD Migration", "Keyboard Replacement"] },
+      { title: "Module 3: Basic Troubleshooting", topics: ["Battery & Charger Issues", "Wi-Fi Card Replacement", "Heating Issues"] },
+      { title: "Module 4: Software Solutions", topics: ["OS Installation", "Driver Updates", "Data Backup"] }
+    ],
+    theme: "purple",
+    heroImage: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2070&auto=format&fit=crop"
+  },
+  "laptop-chip-level-engineering": {
+    name: "Advanced Mobile Chip Level Training (AMCLT)",
+    duration: "3 Months",
+    fees: "35,000",
+    eligibility: "12th Pass / Card Level Knowledge",
+    description: "Advanced chip-level training. Learn motherboard tracing, IC replacement, BGA reballing, and micro-soldering.",
+    opportunities: ["Chip Level Expert", "Service Center Head", "Motherboard Repair Tech"],
+    modules: [
+      { 
+        title: "Module 1: BASIC ELECTRONICS", 
+        topics: [
+          "Mobile Components Identification Knowledge",
+          "Knowledge about P.C.B (Printed Circuit Board)",
+          "Working of Components (How it Work)",
+          "Checking of components & practical testing (by using of multimeters)"
+        ] 
+      },
+      { 
+        title: "Module 2: HARDWARE CLASS", 
+        topics: [
+          "Assembling & Dissembling of different types of mobile phone.",
+          "I.C Rebolling & White Pasted I.C.",
+          "Samsung Dual & IPhone Dual C.P.U",
+          "IPhone Troubling Shooting.",
+          "Solving Issue of Touch Glass By OCA Machine.",
+          "Android & Window Phone Technology",
+          "Soldering & Desoldering of all type of Component.",
+          "Proper Use of Micro Iron (S.M.D Machine)",
+          "Jumper Practice.",
+          "Solving Problem of Network Issue /Charging/ Ringer/ Mice Issue."
+        ] 
+      },
+      { 
+        title: "Module 3: SOFTWARE CLASS", 
+        topics: [
+          "Smartphone Set Formatting.",
+          "Application Installation.",
+          "Hanging Problem.",
+          "Hand On Logo.",
+          "Unlocking of Different Types of Smartphone.",
+          "Flashing - (Anroid Operating System)",
+          "IPhone - (IOS) Formet Reset.",
+          "EMMC Programming."
+        ] 
+      },
+      { 
+        title: "Module 4: TRACING CLASS", 
+        topics: [
+          "Physically Testing of Smartphone.",
+          "Tracing & Reading of Circuit Diagram.",
+          "Track Checking of Mobile Board (Practically Checking By Multimeters)",
+          "Fault Find Out of All Different Types of Smart Phones.",
+          "Fault Finding of I.C Problem.",
+          "In Condition of Dead Phone Repairing."
+        ] 
+      }
+    ],
+    theme: "emerald",
+    heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+  },
+  "iti-ncvt": {
+    name: "ITI (NCVT)",
+    duration: "2 Years",
+    eligibility: "10th Pass",
+    description: "Government-recognized traditional ITI program for specialized trades with comprehensive practical and theoretical learning.",
+    opportunities: ["Government Jobs", "Technical Staff", "Industrial Worker"],
+    modules: [
+      { title: "Module 1: Trade Theory", topics: ["Safety & Hand Tools", "Measurement Instruments", "Basic Workshop Practice"] },
+      { title: "Module 2: Trade Practical", topics: ["Machinery Operation", "Job Making", "Maintenance Practices"] },
+      { title: "Module 3: Workshop Calculation & Science", topics: ["Mathematics", "Physics Basics", "Material Science"] },
+      { title: "Module 4: Employability Skills", topics: ["IT Literacy", "Communication Skills", "Entrepreneurship"] }
+    ],
+    theme: "blue",
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023061/iti_NCVT_bkgzhq.jpg"
+  },
+  "iti-copa-computer-operator-and-programming": {
+    name: "ITI COPA (Computer Operator and Programming)",
+    duration: "1 Year",
+    eligibility: "10th Pass",
+    description: "Learn computer hardware basics, software installation, data entry, basic programming, and office automation tools.",
+    opportunities: ["Computer Operator", "Data Entry Operator", "Lab Assistant"],
+    modules: [
+      { title: "Module 1: Computer Hardware & OS", topics: ["PC Assembly", "Windows & Linux Setup", "Basic Networking"] },
+      { title: "Module 2: Office Automation", topics: ["Word Processing", "Spreadsheets", "Presentations"] },
+      { title: "Module 3: Database & Programming", topics: ["MS Access Basics", "JavaScript Fundamentals", "VBA Basics"] },
+      { title: "Module 4: Internet & Web Design", topics: ["HTML/CSS Basics", "Web Surfing & Security", "E-Commerce Basics"] }
+    ],
+    theme: "pink",
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023060/ITI_COPA_y82neh.avif"
   }
 };
 
@@ -119,8 +329,8 @@ export default async function CourseDetail({ params }) {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-950 border-b border-slate-800">
         <div className="absolute inset-0 z-0">
-          <img src={course.heroImage} alt={course.name} className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/40 backdrop-blur-sm"></div>
+          <img src={course.heroImage} alt={course.name} className="w-full h-full object-cover opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/40 "></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-start">
@@ -160,6 +370,17 @@ export default async function CourseDetail({ params }) {
                 <p className="font-semibold text-sm">{course.eligibility}</p>
               </div>
             </div>
+            {course.fees && (
+              <div className="flex items-center gap-3 text-slate-200 bg-white/5 border border-white/10 px-5 py-3 rounded-2xl backdrop-blur-md">
+                <div className="w-10 h-10 rounded-full bg-blue-900/50 flex items-center justify-center text-green-400">
+                  <FaMoneyBillWave />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-wider text-slate-400 font-bold mb-0.5">Fees</p>
+                  <p className="font-semibold text-sm">₹{course.fees}</p>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">

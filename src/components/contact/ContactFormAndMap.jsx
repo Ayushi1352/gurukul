@@ -9,7 +9,14 @@ export default function ContactFormAndMap() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message Sent Successfully! We will get back to you soon.");
+    const { name, email, phone, subject, message } = formData;
+    
+    // Construct WhatsApp message
+    const whatsappMessage = `*New Contact Form Inquiry*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+    
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/917836004409?text=${whatsappMessage}`, '_blank');
+    
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
   };
 
@@ -34,14 +41,14 @@ export default function ContactFormAndMap() {
           {/* Left Content - Contact Cards (2x2 Grid) */}
           <div className="flex-1 flex flex-col justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-              
+
               {/* Card 1: Address */}
               <div className="bg-white border border-transparent hover:border-blue-500/30 rounded-[2rem] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
                 <div className="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-5 text-xl shadow-md group-hover:scale-110 transition-all duration-300">
                   <FaMapMarkerAlt />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">Institute Address</h4>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed">Sector 62, Tech Blvd<br />New Delhi - 110062</p>
+                <p className="text-slate-500 text-sm font-medium leading-relaxed">1st Floor, C-2, in front of GDA Commercial Complex<br />Navyug Market, Naya Ganj, Ghaziabad, UP 201001</p>
               </div>
 
               {/* Card 2: Phone */}
@@ -50,7 +57,7 @@ export default function ContactFormAndMap() {
                   <FaPhoneAlt />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">Phone Number</h4>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed">+91 98765 43210<br />+91 11 2345 6789</p>
+                <a href="tel:+917836004409" className="text-slate-500 text-sm font-medium leading-relaxed hover:text-blue-900 transition-colors block">+91 7836004409</a>
               </div>
 
               {/* Card 3: Email */}
@@ -59,7 +66,7 @@ export default function ContactFormAndMap() {
                   <FaEnvelope />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">Email Address</h4>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed">admissions@gurukuliti.edu<br />info@gurukuliti.edu</p>
+                <a href="mailto:gurukulitifme@gmail.com" className="text-slate-500 text-sm font-medium leading-relaxed hover:text-blue-900 transition-colors block">gurukulitifme@gmail.com</a>
               </div>
 
               {/* Card 4: Hours */}
@@ -89,10 +96,12 @@ export default function ContactFormAndMap() {
                       type="text"
                       name="name"
                       required
+                      pattern="[A-Za-z\s]+"
+                      title="Please enter only alphabets"
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value.replace(/[^A-Za-z\s]/g, '') })}
                       className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
-                      placeholder="John Doe"
+                      placeholder="Enter your name"
                     />
                   </div>
                   <div className="space-y-2">
@@ -101,10 +110,12 @@ export default function ContactFormAndMap() {
                       type="email"
                       name="email"
                       required
+                      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                      title="Please enter a valid email address"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
-                      placeholder="john@example.com"
+                      placeholder="Enter your email"
                     />
                   </div>
                 </div>
@@ -117,10 +128,13 @@ export default function ContactFormAndMap() {
                       type="tel"
                       name="phone"
                       required
+                      maxLength={10}
+                      pattern="\d{10}"
+                      title="Please enter exactly 10 digits"
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '') })}
                       className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
-                      placeholder="+91 98765 43210"
+                      placeholder="Enter your mobile number"
                     />
                   </div>
                   <div className="space-y-2">
@@ -130,9 +144,9 @@ export default function ContactFormAndMap() {
                       name="subject"
                       required
                       value={formData.subject}
-                      onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500"
-                      placeholder="Admission Enquiry"
+                      placeholder="Enter your subject"
                     />
                   </div>
                 </div>
@@ -144,10 +158,10 @@ export default function ContactFormAndMap() {
                     name="message"
                     required
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows="5"
                     className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all border border-slate-200 focus:border-blue-500 resize-none"
-                    placeholder="Write your query here..."
+                    placeholder="Enter your message"
                   ></textarea>
                 </div>
 
@@ -171,13 +185,13 @@ export default function ContactFormAndMap() {
         <div className="mt-8">
           <div className="w-full h-[400px] lg:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white relative group">
             <div className="absolute inset-0 bg-blue-900/10 pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-500"></div>
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112151.78912882196!2d77.10860533088198!3d28.552467540292323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps?q=Navyug+Market,+Naya+Ganj,+Ghaziabad,+Uttar+Pradesh+201001&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 w-full h-full object-cover filter grayscale-[20%] contrast-125"
               title="Google Maps Location"

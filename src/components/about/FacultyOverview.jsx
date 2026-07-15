@@ -16,35 +16,32 @@ export default function FacultyOverview() {
       title: "Lead Instructor - Web Dev",
       country: "india",
       description: "With 8+ years of industry experience building scalable web applications for Fortune 500 companies, Arjun brings deep expertise in full-stack JavaScript, React, and Node.js directly into the classroom. He focuses on clean code, architecture, and practical problem-solving.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784030329/arjun_verma_tp1uus.avif"
     },
     {
       name: "Sneha Patel",
       title: "UI/UX & Design Head",
       country: "india",
       description: "Sneha is a seasoned UI/UX designer with a passion for creating intuitive, accessible, and beautiful user interfaces. She leads our design curriculum, teaching students how to bridge the gap between human psychology and digital product design.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop"
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784030388/sneha_patel_a0fkld.jpg"
     },
     {
       name: "Rohan Gupta",
-      title: "Cloud & Security Expert",
+      title: "Lead Instructor - Laptop & Mobile Repair",
       country: "india",
-      description: "An AWS certified solutions architect and cybersecurity enthusiast. Rohan mentors our infrastructure students, providing hands-on training in cloud deployment, server management, and network defense strategies.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+      description: "With extensive experience in motherboard repair and mobile diagnostics, Rohan leads our hardware engineering courses. He provides hands-on training in chip-level and card-level repairs, ensuring students master the intricacies of modern electronics.",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784030814/rohan_gupta_nas8yb.avif"
     },
     {
       name: "Pooja Desai",
-      title: "Data Science Lead",
+      title: "Instructor - Digital Marketing & Accounting",
       country: "india",
-      description: "Pooja is a former AI researcher who simplifies complex machine learning concepts. Her curriculum covers everything from Python fundamentals to advanced neural networks, ensuring students are ready for the AI-driven future.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+      description: "Pooja is an expert in digital marketing strategies and financial accounting. She guides students through practical modules in SEO, social media marketing, and Tally.ERP 9, preparing them for dynamic roles in the modern business world.",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784030815/pooja_desai_g7msxe.jpg"
     }
   ];
 
-  const flags = {
-    india: "https://res.cloudinary.com/dbjc1bef7/image/upload/v1762433524/flag_xm6gdt.png",
-    nepal: "https://res.cloudinary.com/dbjc1bef7/image/upload/v1762433524/flag_1_ax223e.png",
-  };
+ 
 
   const [slidesToShow, setSlidesToShow] = useState(4);
   const [isMounted, setIsMounted] = useState(false);
@@ -64,7 +61,7 @@ export default function FacultyOverview() {
         setSlidesToShow(4);
       }
     };
-    
+
     handleResize(); // Initial check
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -75,7 +72,7 @@ export default function FacultyOverview() {
     infinite: false,
     speed: 600,
     slidesToShow: slidesToShow,
-    slidesToScroll: 1,  
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
@@ -135,25 +132,12 @@ export default function FacultyOverview() {
                     >
                       <div className="mb-2 flex items-center justify-between">
                         <p className="font-bold text-sm text-blue-200">{expert.title}</p>
-                        {expert.country && (
-                          <img
-                            src={flags[expert.country]}
-                            alt="flag"
-                            className="w-5 h-5 rounded shadow-sm ml-2"
-                          />
-                        )}
+
                       </div>
 
                       <p className="text-sm text-slate-200 line-clamp-3 mb-4">{expert.description}</p>
 
-                      <div className="mt-2 flex gap-3">
-                        <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
-                          <FaLinkedin size={14} />
-                        </span>
-                        <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-slate-900 transition-colors">
-                          <FaGithub size={14} />
-                        </span>
-                      </div>
+
                     </div>
                   </div>
 
@@ -187,16 +171,16 @@ export default function FacultyOverview() {
             onClick={() => setSelectedExpert(null)}
           />
           {selectedExpert && (
-            <div className="relative bg-[#EBEDFA] rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 mx-2 md:mx-0 overflow-hidden">
-              <div className="flex flex-col md:flex-row h-full">
-                <div className="md:w-2/5 w-full bg-[#EBEDFA]">
+            <div className="relative bg-[#EBEDFA] rounded-3xl shadow-2xl max-w-3xl w-full min-h-[450px] max-h-[90vh] overflow-y-auto transform transition-all duration-300 mx-2 md:mx-0 overflow-hidden flex items-center">
+              <div className="flex flex-col md:flex-row w-full">
+                <div className="md:w-2/5 w-full p-6 md:p-8 flex items-center justify-center">
                   <img
                     src={selectedExpert.image}
                     alt={selectedExpert.name}
-                    className="w-full h-[300px] md:h-full object-cover"
+                    className="w-full max-w-[260px] h-72 md:h-80 object-cover object-top rounded-2xl shadow-lg"
                   />
                 </div>
-                <div className="md:w-3/5 w-full p-8 md:p-12 flex flex-col relative">
+                <div className="md:w-3/5 w-full p-8 md:p-12 md:pl-0 flex flex-col justify-center relative">
                   <button
                     onClick={() => setSelectedExpert(null)}
                     className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-gray-100 text-gray-700 hover:text-black transition-all duration-200 text-xl font-bold z-10"
@@ -215,14 +199,7 @@ export default function FacultyOverview() {
                       {selectedExpert.description}
                     </p>
                   </div>
-                  <div className="flex gap-4 mt-auto flex-wrap">
-                    <button className="flex-1 bg-[#191313] hover:bg-black text-[#EBEDFA] font-bold py-3 px-6 rounded-full transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300">
-                      Connect on LinkedIn
-                    </button>
-                    <button className="flex-1 bg-white hover:bg-gray-100 text-black font-bold py-3 px-6 rounded-full transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300">
-                      View Portfolio
-                    </button>
-                  </div>
+                
                 </div>
               </div>
             </div>

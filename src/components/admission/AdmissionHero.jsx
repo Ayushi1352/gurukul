@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { FaGraduationCap, FaArrowRight } from 'react-icons/fa';
 
 export default function AdmissionHero() {
@@ -7,14 +8,14 @@ export default function AdmissionHero() {
     <section
       className="relative w-full bg-slate-950 font-sans overflow-hidden py-24 lg:py-36 border-b border-slate-800"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1511649475669-e288648b2339?q=80&w=2070&auto=format&fit=crop')",
+        backgroundImage: "url('https://res.cloudinary.com/w4kwyx1p/image/upload/v1784026998/Joyful_Moments_of_Placed_Candidates_olytx8.avif')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
       }}
     >
       {/* Dark Gradient Overlay for perfect readability on the left where text is */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50 backdrop-blur-sm z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50  z-0 pointer-events-none"></div>
 
       {/* Subtle Background Grid */}
       <div
@@ -33,7 +34,7 @@ export default function AdmissionHero() {
             <FaGraduationCap /> Apply Now
           </span>
           <span className="text-slate-200 text-xs sm:text-sm font-medium drop-shadow-md">
-            Admissions 2024-25 Open
+            Admissions 2025-26 Open
           </span>
         </div>
 
@@ -44,29 +45,23 @@ export default function AdmissionHero() {
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg lg:text-xl text-slate-300 font-normal mb-12 max-w-2xl leading-relaxed drop-shadow-lg">
-          Join Gurukul ITI and transform your passion for technology into a high-paying, future-proof profession. Our admissions are now open for all premier tech programs.
+          Join Gurukul Jyoti I.T.I and transform your passion for technology into a high-paying, future-proof profession. Our admissions are now open for all premier tech programs.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-          <button
-            onClick={() => {
-              const form = document.getElementById('admission-form');
-              if (form) form.scrollIntoView({ behavior: 'smooth' });
-            }}
+          <Link
+            href="#admission-form"
             className="w-full sm:w-auto bg-white hover:bg-slate-200 text-slate-900 font-semibold px-8 py-3.5 rounded-full transition-colors text-sm sm:text-base whitespace-nowrap shadow-xl flex items-center justify-center gap-2"
           >
             Fill Application <FaArrowRight />
-          </button>
-          <button
-            onClick={() => {
-              const process = document.getElementById('admission-process');
-              if (process) process.scrollIntoView({ behavior: 'smooth' });
-            }}
+          </Link>
+          <Link
+            href="#admission-process"
             className="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 backdrop-blur-md border border-slate-600 text-white font-semibold px-8 py-3.5 rounded-full transition-all text-sm sm:text-base whitespace-nowrap shadow-lg flex items-center justify-center"
           >
             View Process
-          </button>
+          </Link>
         </div>
 
       </div>

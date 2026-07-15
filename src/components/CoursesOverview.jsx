@@ -6,24 +6,27 @@ export default function CoursesOverview() {
   const courses = [
     {
       id: 1,
-      title: "Full Stack Web Development",
-      desc: "Master MERN stack and build scalable web applications and create stunning interfaces.",
-      duration: "1 Year",
-      eligibility: "12th Pass / Grad"
+      title: "Mobile & Laptop Repairing",
+      desc: "Master Android/iPhone repairing and become a Laptop Hardware & Software engineer with expert-led practical training.",
+      duration: "Flexible",
+      eligibility: "10th Pass",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023937/Master_in_Android_Phone_Repairing_jilqer.avif"
     },
     {
       id: 2,
-      title: "UI/UX & Graphic Design",
-      desc: "Learn Figma, Adobe Suite and create stunning interfaces and create stunning interfaces.",
-      duration: "6 Months",
-      eligibility: "10th Pass"
+      title: "Web Development",
+      desc: "Learn modern web development technologies to build dynamic, responsive websites and applications.",
+      duration: "4 Months",
+      eligibility: "10th / 12th Pass",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop"
     },
     {
       id: 3,
-      title: "Digital Marketing Pro",
-      desc: "SEO, SEM, Social Media, and Analytics mastery and create stunning interfaces.",
-      duration: "6 Months",
-      eligibility: "12th Pass"
+      title: "ITI COPA",
+      desc: "Computer Operator and Programming Operator. Get certified and become a specialized computer professional.",
+      duration: "1 Year",
+      eligibility: "10th Pass",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023060/ITI_COPA_y82neh.avif"
     }
   ];
 
@@ -32,9 +35,8 @@ export default function CoursesOverview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">Future-Ready Skills</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Our Popular IT Courses</h2>
-            <p className="text-gray-700 text-lg md:text-xl">Choose from our industry-demanded tech courses designed for immediate employment in top IT companies.</p>
+            <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">GURUKUL JYOTI I.T.I TECHNICAL & PROFESSIONAL COURSES :</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight uppercase leading-tight">MOBILE & LAPTOP HARDWARE / SOFTWARE REPAIRING COURSE</h2>
           </div>
           <Link href="/courses" className="group shrink-0 inline-flex items-center gap-3 bg-[#191313] text-white px-8 py-4 rounded-full font-semibold hover:bg-black transition-all duration-300 shadow-lg">
             Explore All <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -51,7 +53,7 @@ export default function CoursesOverview() {
               {/* Image Container */}
               <div className="w-full h-48 sm:h-52 rounded-[1rem] overflow-hidden mb-5">
                 <img
-                  src={`https://picsum.photos/seed/${course.id * 10}/600/400`}
+                  src={course.image}
                   alt={course.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

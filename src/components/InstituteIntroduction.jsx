@@ -21,8 +21,8 @@ export default function InstituteIntroduction() {
           <div className="w-full sm:w-2/3 md:w-1/2 lg:w-[28%] xl:w-[25%] flex justify-center flex-shrink-0 mt-4 lg:mt-0">
             <div className="w-full max-w-[350px] h-[400px] lg:w-full lg:max-w-[300px] xl:max-w-[340px] lg:h-[420px] xl:h-[480px]">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1771&auto=format&fit=crop"
-                alt="Students at Gurukul ITI"
+                src="https://res.cloudinary.com/w4kwyx1p/image/upload/v1784029093/About_us_and_wo1nrf.avif"
+                alt="Students at Gurukul Jyoti I.T.I"
                 className="w-full h-full object-cover rounded-xl shadow-lg"
               />
             </div>
@@ -31,7 +31,7 @@ export default function InstituteIntroduction() {
           {/* Right Column - Text & Button */}
           <div className="w-full lg:w-[36%] xl:w-[40%] flex flex-col items-center lg:items-start text-center lg:text-left gap-5 lg:gap-4 xl:gap-6 mt-6 lg:mt-0">
             <p className="text-gray-700 text-sm md:text-base lg:text-[13px] xl:text-[15px] leading-relaxed font-normal">
-              At Gurukul ITI, every course is inspired by the rich technological tradition of innovation and crafted with a deep passion for authentic skill-building. We believe great education should do more than satisfy your curiosity—it should create career opportunities, innovation, and a true sense of confidence. That's why our mentors carefully select premium curriculum, practical projects, and industry-grade tools sourced globally to ensure each student delivers an unmistakably genuine performance.
+              At Gurukul Jyoti I.T.I, every course is inspired by the rich technological tradition of innovation and crafted with a deep passion for authentic skill-building. We believe great education should do more than satisfy your curiosity—it should create career opportunities, innovation, and a true sense of confidence. That's why our mentors carefully select premium curriculum, practical projects, and industry-grade tools sourced globally to ensure each student delivers an unmistakably genuine performance.
             </p>
             <p className="text-gray-700 text-sm md:text-base lg:text-[13px] xl:text-[15px] leading-relaxed font-normal">
               From hands-on coding and advanced networking to signature AI programs full of bold concepts, we blend classic computer science techniques with modern creativity. Our vibrant tech-labs, elegant infrastructure, and attentive mentorship make every learning experience exceptional.

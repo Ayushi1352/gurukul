@@ -28,15 +28,6 @@ export default function PlacementHighlights() {
             We don't just teach you how to code; we launch your tech career. Earn a successful career in top MNCs right after completing your course!
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-10">
-            <button className="w-full sm:w-auto px-8 py-3.5 bg-[#191313] text-white rounded-full font-bold text-lg hover:bg-black transition-colors shadow-lg">
-              Enroll Now
-            </button>
-            <button className="w-full sm:w-auto px-8 py-3.5 bg-white border border-gray-300 text-gray-900 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-sm">
-              Talk to Counsellor
-            </button>
-          </div>
 
           {/* Reviews */}
           <div className="flex flex-col items-center gap-2 mb-16">

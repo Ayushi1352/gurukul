@@ -14,7 +14,7 @@ export default function History() {
       color: "text-blue-700",
       iconColor: "bg-gradient-to-br from-blue-500 to-indigo-600",
       title: "The Foundation",
-      desc: "Gurukul ITI was established with a vision to bridge the gap between academic learning and industry demands.",
+      desc: "Gurukul Jyoti I.T.I was established with a vision to bridge the gap between academic learning and industry demands.",
       age: "Core Setup",
       focus: "Institute Launch",
     },

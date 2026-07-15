@@ -26,7 +26,7 @@ export default function AdmissionBanner() {
 
             {/* Paragraph */}
             <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl leading-relaxed font-normal">
-              Join Gurukul ITI and master the skills that top tech companies are actively hiring for. Limited seats for the upcoming batches.
+              Join Gurukul Jyoti I.T.I and master the skills that top tech companies are actively hiring for. Limited seats for the upcoming batches.
             </p>
 
             {/* Buttons */}
@@ -34,9 +34,7 @@ export default function AdmissionBanner() {
               <Link href="/admission" className="w-full sm:w-auto text-center px-8 py-4 rounded-full bg-[#191313] text-white font-semibold text-base hover:bg-black transition-colors shadow-lg">
                 Apply Online Now
               </Link>
-              <Link href="/contact" className="w-full sm:w-auto text-center px-8 py-4 rounded-full bg-white border border-gray-300 text-gray-900 font-semibold text-base hover:bg-gray-50 transition-colors shadow-sm flex items-center justify-center gap-2 group">
-                Download Brochure <FaArrowRight className="text-sm text-gray-500 group-hover:translate-x-1 transition-transform" />
-              </Link>
+
             </div>
 
             {/* Stat Cards */}
@@ -80,8 +78,8 @@ export default function AdmissionBanner() {
           <div className="w-full lg:w-[45%] xl:w-[40%] mt-8 lg:mt-0 relative">
             <div className="relative w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&h=1400&auto=format&fit=crop"
-                alt="Tech Students at Gurukul ITI"
+                src="https://res.cloudinary.com/w4kwyx1p/image/upload/v1784028865/Fast-Track_Your_Career_dwpbph.avif"
+                alt="Tech Students at Gurukul Jyoti I.T.I"
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />
             </div>

@@ -5,7 +5,7 @@ export default function ContactDetails() {
   const details = [
     {
       title: "Institute Address",
-      info: "Gurukul ITI Campus, Sector 62, Tech Boulevard, New Delhi - 110062",
+      info: "1st Floor, C-2, in front of GDA Commercial Complex, Navyug Market, Naya Ganj, Ghaziabad, Uttar Pradesh 201001",
       icon: <FaMapMarkerAlt />,
       color: "text-blue-500",
       bg: "bg-blue-50",
@@ -13,7 +13,7 @@ export default function ContactDetails() {
     },
     {
       title: "Phone Number",
-      info: "+91 98765 43210\n+91 11 2345 6789",
+      info: <a href="tel:+917836004409" className="hover:text-purple-500 transition-colors">+91 7836004409</a>,
       icon: <FaPhoneAlt />,
       color: "text-purple-500",
       bg: "bg-purple-50",
@@ -21,7 +21,7 @@ export default function ContactDetails() {
     },
     {
       title: "Email Address",
-      info: "admissions@gurukuliti.edu\ninfo@gurukuliti.edu",
+      info: <a href="mailto:gurukulitifme@gmail.com" className="hover:text-pink-500 transition-colors">gurukulitifme@gmail.com</a>,
       icon: <FaEnvelope />,
       color: "text-pink-500",
       bg: "bg-pink-50",

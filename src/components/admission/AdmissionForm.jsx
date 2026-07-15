@@ -10,14 +10,25 @@ export default function AdmissionForm() {
     course: '',
     message: ''
   });
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    let { name, value } = e.target;
+    if (name === 'name') value = value.replace(/[^A-Za-z\s]/g, '');
+    if (name === 'phone') value = value.replace(/\D/g, '');
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Application submitted successfully! Our counselors will contact you shortly.");
+    const { name, phone, email, course, message } = formData;
+    
+    // Construct WhatsApp message
+    const whatsappMessage = `*New Admission Inquiry*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Course:* ${course}%0A*Message:* ${message}`;
+    
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/917836004409?text=${whatsappMessage}`, '_blank');
+    
     setFormData({ name: '', phone: '', email: '', course: '', message: '' });
   };
 
@@ -77,10 +88,12 @@ export default function AdmissionForm() {
                       type="text"
                       name="name"
                       required
+                      pattern="[A-Za-z\s]+"
+                      title="Please enter only alphabets"
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
-                      placeholder="John Doe"
+                      placeholder="Enter your name"
                     />
                   </div>
                   <div className="space-y-2">
@@ -89,10 +102,13 @@ export default function AdmissionForm() {
                       type="tel"
                       name="phone"
                       required
+                      maxLength={10}
+                      pattern="\d{10}"
+                      title="Please enter exactly 10 digits"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="Enter your mobile number"
                     />
                   </div>
                 </div>
@@ -105,28 +121,60 @@ export default function AdmissionForm() {
                       type="email"
                       name="email"
                       required
+                      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                      title="Please enter a valid email address"
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white"
-                      placeholder="john@example.com"
+                      placeholder="Enter your email"
                     />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-2 relative">
                     <label className="text-sm font-bold text-slate-900 pl-2">Interested Course</label>
-                    <select
-                      name="course"
-                      required
-                      value={formData.course}
-                      onChange={handleChange}
-                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white appearance-none"
+                    <div 
+                      className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white cursor-pointer flex justify-between items-center"
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     >
-                      <option value="" disabled>Select a Program...</option>
-                      <option value="Web Development">Full Stack Web Development</option>
-                      <option value="Data Science">Data Science & AI</option>
-                      <option value="Digital Marketing">Digital Marketing</option>
-                      <option value="UI/UX Design">UI/UX & Graphic Design</option>
-                      <option value="Hardware Networking">Hardware & Networking</option>
-                    </select>
+                      <span className={formData.course ? "text-slate-900" : "text-slate-400"}>
+                        {formData.course ? formData.course : "Select a Program..."}
+                      </span>
+                      <svg className={`w-4 h-4 text-slate-400 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+
+                    {isDropdownOpen && (
+                      <div className="absolute top-[105%] left-0 right-0 bg-white border border-slate-100 rounded-2xl shadow-xl z-50 max-h-[240px] overflow-y-auto py-2 scrollbar-thin scrollbar-thumb-slate-200">
+                        {[
+                          { label: "Master in Android Phone Repairing", value: "Android Phone Repairing" },
+                          { label: "Expert in Smartphone Repairing", value: "Smartphone Repairing" },
+                          { label: "Specialist in iPhone Repairing", value: "iPhone Repairing" },
+                          { label: "Laptop Hardware & Software Engineer", value: "Laptop Hardware & Software" },
+                          { label: "Laptop (Card Level) Engineering", value: "Laptop Card Level" },
+                          { label: "Laptop (Chip Level) Engineering", value: "Laptop Chip Level" },
+                          { label: "ADFA (Advance Diploma in Financial Accounting)", value: "ADFA" },
+                          { label: "Computer Basic", value: "Computer Basic" },
+                          { label: "Tally.ERP 9", value: "Tally.ERP 9" },
+                          { label: "Advance Excel", value: "Advance Excel" },
+                          { label: "Web Development", value: "Web Development" },
+                          { label: "Graphic Designing", value: "Graphic Designing" },
+                          { label: "C & C++", value: "C & C++" },
+                          { label: "Digital Marketing", value: "Digital Marketing" },
+                          { label: "English Speaking & Personality Development", value: "English Speaking" },
+                          { label: "ITI (NCVT)", value: "ITI (NCVT)" },
+                          { label: "ITI COPA (Computer Operator and Programming)", value: "ITI COPA" }
+                        ].map((courseOption, idx) => (
+                          <div
+                            key={idx}
+                            className="px-5 py-3 hover:bg-blue-50 hover:text-blue-600 cursor-pointer text-slate-600 text-sm font-medium transition-colors"
+                            onClick={() => {
+                              setFormData({ ...formData, course: courseOption.label });
+                              setIsDropdownOpen(false);
+                            }}
+                          >
+                            {courseOption.label}
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -139,7 +187,7 @@ export default function AdmissionForm() {
                     onChange={handleChange}
                     rows="4"
                     className="w-full px-5 py-4 bg-[#f8f9fa] rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all border border-transparent focus:border-white resize-none"
-                    placeholder="Ask us anything..."
+                    placeholder="Enter your message"
                   ></textarea>
                 </div>
 
@@ -167,7 +215,7 @@ export default function AdmissionForm() {
               <FaEnvelope />
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-2">Email Address</h4>
-            <p className="text-slate-500 font-medium">admission@gurukuliti.com</p>
+            <a href="mailto:gurukulitifme@gmail.com" className="text-slate-500 font-medium hover:text-purple-500 transition-colors block">gurukulitifme@gmail.com</a>
           </div>
 
           {/* Card 2: Call */}
@@ -176,7 +224,7 @@ export default function AdmissionForm() {
               <FaPhoneAlt />
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-2">Call Us Now</h4>
-            <p className="text-slate-500 font-medium">+91 98765 43210</p>
+            <a href="tel:+917836004409" className="text-slate-500 font-medium hover:text-purple-500 transition-colors block">+91 7836004409</a>
           </div>
 
           {/* Card 3: Location */}
@@ -185,7 +233,7 @@ export default function AdmissionForm() {
               <FaMapMarkerAlt />
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-2">Our Campus</h4>
-            <p className="text-slate-500 font-medium">Tech Park, Phase 1, India</p>
+            <p className="text-slate-500 font-medium">1st Floor, C-2, in front of GDA Commercial Complex, Navyug Market, Naya Ganj, Ghaziabad, UP 201001</p>
           </div>
 
         </div>

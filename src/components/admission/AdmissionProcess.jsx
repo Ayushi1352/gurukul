@@ -27,7 +27,7 @@ export default function AdmissionProcess() {
     {
       step: "04",
       title: "Enrollment & Onboarding",
-      desc: "Complete the fee payment, secure your seat, and receive your official Gurukul ITI welcome kit.",
+      desc: "Complete the fee payment, secure your seat, and receive your official Gurukul Jyoti I.T.I welcome kit.",
       icon: <FaUserGraduate />,
       color: "emerald"
     }

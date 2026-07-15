@@ -91,7 +91,7 @@ export default function Features() {
             Unmatched Excellence
           </h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-normal">
-            We blend traditional values of discipline and dedication with highly modern software training techniques. Discover the Gurukul ITI advantage.
+            We blend traditional values of discipline and dedication with highly modern software training techniques. Discover the Gurukul Jyoti I.T.I advantage.
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export default function DirectorMessage() {
           <div className="w-full lg:w-[35%] shrink-0">
             <img 
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
-              alt="Dr. Vikram Singh" 
+              alt="Jyoti Rastogi" 
               className="w-full h-auto aspect-[4/5] object-cover rounded-3xl shadow-xl shadow-slate-200/40"
             />
           </div>
@@ -27,15 +27,15 @@ export default function DirectorMessage() {
           {/* Text Content */}
           <div className="w-full lg:w-[65%] lg:pt-4">
             <h3 className="text-2xl sm:text-[1.75rem] font-semibold text-blue-900 mb-2 tracking-tight">
-              Dr. Vikram Singh
+              Jyoti Rastogi
             </h3>
             <p className="text-sm sm:text-base text-gray-700 mb-10 font-normal">
-              Founder & Director, Gurukul ITI
+              Founder & Director, Gurukul Jyoti I.T.I
             </p>
             
             <div className="space-y-6 text-base sm:text-[1.125rem] text-gray-700 leading-relaxed font-normal">
               <p>
-                At Gurukul ITI, we believe that technology is the greatest equalizer of our time. Our goal has never been just to teach coding, but to instill a mindset of problem-solving and continuous innovation.
+                At Gurukul Jyoti I.T.I, we believe that technology is the greatest equalizer of our time. Our goal has never been just to teach coding, but to instill a mindset of problem-solving and continuous innovation.
               </p>
               <p>
                 I invite you to join our vibrant community and embark on a transformative journey that will define your career and help you contribute meaningfully to the global tech industry.

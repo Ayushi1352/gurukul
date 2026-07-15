@@ -3,8 +3,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Gurukul ITI | Empowering Futures",
-  description: "Join Gurukul ITI to build a strong foundation for your industrial career with modern facilities and expert guidance.",
+  title: "Gurukul Jyoti I.T.I | Empowering Futures",
+  description: "Join Gurukul Jyoti I.T.I to build a strong foundation for your industrial career with modern facilities and expert guidance.",
 };
 
 export default function RootLayout({ children }) {

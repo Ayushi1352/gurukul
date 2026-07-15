@@ -1,20 +1,20 @@
 "use client";
 import React from 'react';
-import { FaPhoneAlt, FaArrowRight } from 'react-icons/fa';
+import { FaPhoneAlt, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 
 export default function ContactHero() {
   return (
     <section
       className="relative w-full bg-slate-950 font-sans overflow-hidden py-24 lg:py-36 border-b border-slate-800"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=2071&auto=format&fit=crop')",
+        backgroundImage: "url('https://res.cloudinary.com/w4kwyx1p/image/upload/v1784028201/image1_iqy7i4.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
       }}
     >
       {/* Dark Gradient Overlay for perfect readability on the left where text is */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50 backdrop-blur-sm z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50  z-0 pointer-events-none"></div>
 
       {/* Subtle Background Grid */}
       <div
@@ -49,15 +49,14 @@ export default function ContactHero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-          <button
-            onClick={() => {
-              const form = document.getElementById('contact-form');
-              if (form) form.scrollIntoView({ behavior: 'smooth' });
-            }}
+          <a
+            href="https://wa.me/917836004409?text=Hello,%20I%20have%20some%20questions%20about%20admissions%20and%20courses."
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto bg-white hover:bg-slate-200 text-slate-900 font-semibold px-8 py-3.5 rounded-full transition-colors text-sm sm:text-base whitespace-nowrap shadow-xl flex items-center justify-center gap-2"
           >
-            Send a Message <FaArrowRight />
-          </button>
+            <FaWhatsapp className="text-xl text-[#25D366]" /> Chat on WhatsApp
+          </a>
         </div>
 
       </div>

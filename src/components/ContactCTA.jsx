@@ -31,15 +31,15 @@ export default function ContactCTA() {
             <div className="sm:w-[120px] lg:w-[140px] shrink-0 hidden sm:block"></div>
             <div className="flex-1">
               <p className="text-lg lg:text-xl text-slate-600 mb-10 max-w-5xl font-normal leading-relaxed">
-                Join thousands of successful alumni who started their journey at Gurukul ITI. We empower students to adapt to changing technologies, master authentic skills seamlessly, and thrive in an increasingly competitive digital world.
+                Join thousands of successful alumni who started their journey at Gurukul Jyoti I.T.I. We empower students to adapt to changing technologies, master authentic skills seamlessly, and thrive in an increasingly competitive digital world.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                 <Link href="/contact" className="w-full sm:w-auto inline-flex justify-center items-center bg-white text-slate-900 hover:bg-slate-50 px-8 py-3.5 rounded-full font-bold text-base transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                   Apply Online Today
                 </Link>
-                <a href="tel:+911234567890" className="w-full sm:w-auto inline-flex justify-center items-center bg-transparent border border-slate-400/60 text-slate-800 hover:bg-slate-200/50 px-8 py-3.5 rounded-full font-bold text-base transition-all">
-                  Call +91 123 456 7890
+                <a href="tel:+917836004409" className="w-full sm:w-auto inline-flex justify-center items-center bg-transparent border border-slate-400/60 text-slate-800 hover:bg-slate-200/50 px-8 py-3.5 rounded-full font-bold text-base transition-all">
+                  Call +91 7836004409
                 </a>
               </div>
             </div>

@@ -3,6 +3,7 @@ import AdmissionHero from '@/components/admission/AdmissionHero';
 import EligibilityAndDocs from '@/components/admission/EligibilityAndDocs';
 import AdmissionProcess from '@/components/admission/AdmissionProcess';
 import FeeInformation from '@/components/admission/FeeInformation';
+import BatchTimings from '@/components/admission/BatchTimings';
 import AdmissionForm from '@/components/admission/AdmissionForm';
 
 export default function AdmissionPage() {
@@ -12,6 +13,7 @@ export default function AdmissionPage() {
       <EligibilityAndDocs />
       <AdmissionProcess />
       <FeeInformation />
+      <BatchTimings />
       <AdmissionForm />
     </main>
   );

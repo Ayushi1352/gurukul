@@ -22,7 +22,7 @@ export default function Affiliations() {
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <p className="text-blue-900 font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">Trusted Worldwide</p>
           <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-black mb-6 tracking-tight leading-[1.1]">Approvals & Affiliations</h2>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">Gurukul ITI is officially recognized by government bodies and partnered with global tech giants to provide certified, industry-standard education.</p>
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">Gurukul Jyoti I.T.I is officially recognized by government bodies and partnered with global tech giants to provide certified, industry-standard education.</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">

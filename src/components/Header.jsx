@@ -58,12 +58,7 @@ export default function Header() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="w-9 h-9 bg-[#3D69AB] rounded-xl flex items-center justify-center text-[#EBEDFA] font-black text-lg shadow-md group-hover:scale-105 transition-transform duration-300">
-              G
-            </div>
-            <span className="font-extrabold text-xl tracking-tight text-[#191313]">
-              Gurukul <span className="text-[#3D69AB]">ITI</span>
-            </span>
+            <img src="https://res.cloudinary.com/duqjiaiwk/image/upload/v1783929202/gurukul_jyoti_iti_logo_ftoqwa.png" alt="Gurukul Jyoti I.T.I Logo" className="h-10 sm:h-15 w-auto group-hover:scale-105 transition-transform duration-300" />
           </Link>
 
           {/* Center Navigation */}
@@ -143,9 +138,9 @@ export default function Header() {
           }`}
       >
         <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-white">
-          <span className="font-extrabold text-xl tracking-tight text-[#191313]">
-            Gurukul <span className="text-[#3D69AB]">ITI</span>
-          </span>
+          <Link href="/">
+            <img src="https://res.cloudinary.com/duqjiaiwk/image/upload/v1783928883/gurukul_iti_logo_jtu9pg.png" alt="Gurukul Jyoti I.T.I Logo" className="h-10 w-auto" />
+          </Link>
           <button
             onClick={() => setMenuOpen(false)}
             className="p-2.5 bg-gray-50 text-gray-600 rounded-full hover:bg-gray-200 hover:text-black transition-colors"

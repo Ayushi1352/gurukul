@@ -16,7 +16,7 @@ export default function TrainingAndSkills() {
       title: "Mock Interviews",
       desc: "Face the heat before the real day. Our industry experts conduct rigorous 1-on-1 technical and HR mock interviews, providing detailed feedback to refine your answers.",
       icon: <FaComments />,
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784024989/Mock_Interviews_wdfauz.avif"
     },
     {
       title: "Soft Skills & Etiquette",

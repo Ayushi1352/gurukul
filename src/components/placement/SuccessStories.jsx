@@ -8,7 +8,7 @@ export default function SuccessStories() {
       course: "Web Development",
       company: "Microsoft",
       package: "18 LPA",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784025622/rahul_xlij75.jpg",
       text: "The rigorous training completely transformed my technical abilities. The placement cell guided me at every step."
     },
     {
@@ -16,7 +16,7 @@ export default function SuccessStories() {
       course: "Data Science",
       company: "Amazon",
       package: "15 LPA",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784025622/priya_p67g5p.jpg",
       text: "Coming from a non-IT background, I never thought I could land a job at Amazon. The faculty made it possible."
     },
     {
@@ -24,7 +24,7 @@ export default function SuccessStories() {
       course: "Cyber Security",
       company: "Cisco",
       package: "12 LPA",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784025623/amit_yplqtq.avif",
       text: "Practical exposure to real-world threats in the labs gave me the exact skills companies like Cisco are looking for."
     },
     {
@@ -32,7 +32,7 @@ export default function SuccessStories() {
       course: "UI/UX Design",
       company: "Google",
       package: "22 LPA",
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=400&auto=format&fit=crop",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784025622/neha_hzyqur.avif",
       text: "The portfolio sessions were a game-changer. They don't just teach software, they teach you how to think like a professional."
     }
   ];
@@ -68,9 +68,7 @@ export default function SuccessStories() {
               {/* Content Box */}
               <div className="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end h-full">
                 
-                <div className="mb-4 text-blue-400 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
-                  <FaQuoteLeft className="text-3xl" />
-                </div>
+                
                 
                 <p className="text-slate-200 text-sm leading-relaxed mb-6 italic drop-shadow-md">
                   "{story.text}"
@@ -82,14 +80,7 @@ export default function SuccessStories() {
                     <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider">{story.course}</p>
                   </div>
                   
-                  <div className="flex items-center gap-2 mt-2">
-                    <span className="bg-white/10 backdrop-blur-md text-white px-3 py-1.5 rounded-lg text-xs font-bold border border-white/20 shadow-sm">
-                      {story.company}
-                    </span>
-                    <span className="bg-emerald-500/20 text-emerald-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-emerald-500/30 shadow-sm">
-                      {story.package}
-                    </span>
-                  </div>
+                 
                 </div>
                 
               </div>

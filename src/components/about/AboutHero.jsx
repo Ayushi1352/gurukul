@@ -7,7 +7,7 @@ export default function AboutHero() {
     <section
       className="relative w-full font-sans overflow-hidden bg-slate-950 pt-28 lg:pt-32 flex flex-col border-b border-slate-800"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')",
+        backgroundImage: "url('https://res.cloudinary.com/w4kwyx1p/image/upload/v1784010361/hero_banner_image_ai04tz.avif')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -15,7 +15,7 @@ export default function AboutHero() {
     >
 
       {/* Dark Gradient Overlay for perfect readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50 backdrop-blur-sm z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/50  z-0 pointer-events-none"></div>
 
       {/* Subtle Background Grid */}
       <div
@@ -35,7 +35,7 @@ export default function AboutHero() {
             Admissions Open
           </span>
           <span className="text-slate-200 text-xs sm:text-sm font-medium drop-shadow-md">
-            New Batches Starting 2025
+            New Batches Starting 2026
           </span>
         </div>
 
@@ -48,9 +48,9 @@ export default function AboutHero() {
             Blending academic rigor with practical industry experience to ensure our students are always one step ahead in the digital world.
           </p>
 
-          <button className="bg-[#191313] hover:bg-black text-[#EBEDFA] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1 w-fit">
+          <Link href="/courses" className="bg-[#191313] hover:bg-black text-[#EBEDFA] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1 w-fit">
             Explore Programs <FaArrowRight className="text-sm font-light ml-1" />
-          </button>
+          </Link>
 
           {/* Stats Below Button */}
           <div className="mt-12 sm:mt-12 flex flex-wrap items-center gap-6 sm:gap-10  max-w-fit pr-8">

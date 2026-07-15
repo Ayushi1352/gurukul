@@ -29,18 +29,18 @@ export default function PhotoGrid() {
   ];
 
   const images = [
-    { id: 1, category: 'Campus', src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop', alt: 'Main Campus Building' },
-    { id: 2, category: 'Laboratories', src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop', alt: 'Advanced Computer Lab' },
-    { id: 3, category: 'Events', src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop', alt: 'Annual Tech Seminar' },
-    { id: 4, category: 'Classrooms', src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop', alt: 'Smart Classroom Setup' },
-    { id: 5, category: 'Workshops', src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop', alt: 'Hardware & Networking Workshop' },
-    { id: 6, category: 'Industrial Visits', src: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop', alt: 'TCS Campus Industrial Visit' },
-    { id: 7, category: 'Student Activities', src: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop', alt: 'Sports Day & Athletics' },
-    { id: 8, category: 'Campus', src: 'https://images.unsplash.com/photo-1519452285856-4277b08d4b3a?q=80&w=800&auto=format&fit=crop', alt: 'Student Ground & Greenery' },
-    { id: 9, category: 'Laboratories', src: 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=800&auto=format&fit=crop', alt: 'Cyber Security Lab' },
-    { id: 10, category: 'Events', src: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800&auto=format&fit=crop', alt: 'Mega Placement Drive' },
-    { id: 11, category: 'Classrooms', src: 'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=800&auto=format&fit=crop', alt: 'Interactive UI/UX Session' },
-    { id: 12, category: 'Student Activities', src: 'https://images.unsplash.com/photo-1511629091441-ee46146481b6?q=80&w=800&auto=format&fit=crop', alt: 'Annual Cultural Fest' },
+    { id: 1, category: 'Campus', src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop', alt: 'Main Campus Building' },
+    { id: 2, category: 'Laboratories', src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop', alt: 'Advanced Computer Lab' },
+    { id: 3, category: 'Events', src: 'https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?q=80&w=2070&auto=format&fit=crop', alt: 'Annual Tech Seminar' },
+    { id: 4, category: 'Classrooms', src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop', alt: 'Smart Classroom Setup' },
+    { id: 5, category: 'Workshops', src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop', alt: 'Hardware & Networking Workshop' },
+    { id: 6, category: 'Industrial Visits', src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop', alt: 'TCS Campus Industrial Visit' },
+    { id: 7, category: 'Student Activities', src: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop', alt: 'Sports Day & Athletics' },
+    { id: 8, category: 'Campus', src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop', alt: 'Student Ground & Greenery' },
+    { id: 9, category: 'Laboratories', src: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop', alt: 'Cyber Security Lab' },
+    { id: 10, category: 'Events', src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop', alt: 'Mega Placement Drive' },
+    { id: 11, category: 'Classrooms', src: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop', alt: 'Interactive UI/UX Session' },
+    { id: 12, category: 'Student Activities', src: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=2070&auto=format&fit=crop', alt: 'Annual Cultural Fest' },
   ];
 
   const filteredImages = activeFilter === 'All' 
@@ -99,7 +99,7 @@ export default function PhotoGrid() {
 
   return (
     <>
-      <section className="py-24 bg-white font-sans relative z-20">
+      <section id="gallery-grid" className="py-24 bg-white font-sans relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Filter Buttons & Features Tip */}
@@ -119,9 +119,7 @@ export default function PhotoGrid() {
                 </button>
               ))}
             </div>
-            <p className="text-slate-400 text-sm font-medium tracking-wide mt-2">
-              <span className="text-blue-900 font-bold">Feature:</span> Click on any image for a full-screen preview.
-            </p>
+           
           </div>
 
           {/* Dynamic Bento Gallery Grid */}

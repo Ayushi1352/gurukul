@@ -7,19 +7,19 @@ export default function Testimonials() {
       name: "Rahul Sharma",
       course: "Full Stack Web Dev Batch 2023",
       review: "The practical coding knowledge I gained helped me secure a software developer job at TCS right after graduation. The faculty is incredibly supportive and the live projects were a game-changer.",
-      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop"
+
     },
     {
       name: "Priya Singh",
       course: "Data Science Batch 2023",
       review: "Modern computer labs and excellent teaching staff. I learned not just coding, but how to be a professional data analyst in the IT industry. Highly recommended!",
-      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1364&auto=format&fit=crop"
+
     },
     {
       name: "Amit Kumar",
       course: "Digital Marketing Batch 2022",
       review: "Best IT institute in the region! The tech labs are well-equipped, and the placement cell works day and night to get us placed in top MNCs. The mentorship is top-notch.",
-      img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1287&auto=format&fit=crop"
+
     }
   ];
 
@@ -32,30 +32,23 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="text-purple-400 font-bold tracking-wider uppercase text-sm mb-4 block">Student Success Stories</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Hear From Our Alumni</h2>
-          <p className="text-xl text-slate-400">Don't just take our word for it. Discover how Gurukul ITI has transformed careers and launched our students into the tech world.</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">What Our Students Say</h2>
+          <p className="text-xl text-slate-400">Don't just take our word for it. Discover how Gurukul Jyoti I.T.I has transformed careers and launched our students into the tech world.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-slate-800/50 backdrop-blur-xl rounded-[2rem] p-10 border border-slate-700 hover:bg-slate-800 transition-all duration-500 hover:-translate-y-2 group relative shadow-2xl">
-              <FaQuoteLeft className="text-6xl text-slate-700/50 absolute top-8 right-8 group-hover:text-purple-500/20 transition-colors duration-500" />
-              
+            <div key={idx} className="bg-slate-800/50 backdrop-blur-xl rounded-[2rem] p-10 border border-slate-700 hover:bg-slate-800 transition-all duration-500 hover:-translate-y-2 group relative shadow-2xl flex flex-col h-full">
+
               <div className="flex text-yellow-400 mb-6 text-lg gap-1">
-                {[1,2,3,4,5].map(star => <FaStar key={star} />)}
+                {[1, 2, 3, 4, 5].map(star => <FaStar key={star} />)}
               </div>
-              
-              <p className="text-slate-300 italic mb-8 leading-relaxed text-lg min-h-[120px]">"{t.review}"</p>
-              
-              <div className="flex items-center gap-4 mt-auto">
-                <div className="relative">
-                  <img src={t.img} alt={t.name} className="w-16 h-16 rounded-full object-cover border-2 border-purple-500" />
-                  <div className="absolute inset-0 rounded-full border-2 border-purple-400 animate-ping opacity-20"></div>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-white">{t.name}</h4>
-                  <p className="text-sm font-medium text-purple-400">{t.course}</p>
-                </div>
+
+              <p className="text-slate-300 italic mb-8 leading-relaxed text-lg flex-1">"{t.review}"</p>
+
+              <div className="mt-auto pt-6 border-t border-slate-700/50">
+                <h4 className="text-xl font-bold text-white">{t.name}</h4>
+                <p className="text-sm font-medium text-purple-400">{t.course}</p>
               </div>
             </div>
           ))}
