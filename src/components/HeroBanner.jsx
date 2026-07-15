@@ -12,21 +12,21 @@ export default function HeroBanner() {
         {/* Subtle floor reflection/light effect to mimic a studio floor */}
         <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-blue-400/[0.05] to-transparent pointer-events-none"></div>
 
-        <div className="max-w-[1400px] mx-auto w-full px-6 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center relative z-10 h-full gap-8 lg:gap-0">
+        <div className="max-w-[1400px] mx-auto w-full px-6 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center relative z-10 h-full gap-12 md:gap-20 lg:gap-0">
 
           {/* Left Column - Text Content */}
           <div className="flex flex-col justify-center z-20 order-2 lg:order-1 pb-20 lg:pb-0 pt-4 lg:pt-10">
-            <h1 className="text-[2.2rem] sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4.5rem] font-bold text-white leading-[1.15] tracking-tight uppercase">
+            <h1 className="text-[2.2rem] sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4.5rem] font-bold text-white leading-[1.15] tracking-tight uppercase md:text-center lg:text-left">
               ULTIMATE SKILLS IN <br className="hidden lg:block" />
               THE INDUSTRY
             </h1>
 
-            <p className="text-slate-200 text-lg sm:text-xl lg:text-2xl font-normal mt-5 lg:mt-8 max-w-md leading-snug">
+            <p className="text-slate-200 text-lg sm:text-xl lg:text-2xl font-normal mt-5 lg:mt-8 max-w-md leading-snug md:text-center lg:text-left md:mx-auto lg:mx-0">
               Let us help you get your <br className="hidden lg:block" />
               dream career!
             </p>
 
-            <div className="mt-8 lg:mt-10">
+            <div className="mt-8 lg:mt-10 md:flex md:justify-center lg:justify-start">
               <Link href="/courses" className="inline-flex items-center group cursor-pointer">
                 <span className="w-6 sm:w-8 h-[2px] bg-[#e63946] mr-3 transition-all duration-300 group-hover:w-12"></span>
                 <span className="text-white font-semibold text-xs sm:text-sm tracking-wide capitalize transition-colors group-hover:text-gray-300">
@@ -42,7 +42,7 @@ export default function HeroBanner() {
               <img
                 src="https://res.cloudinary.com/w4kwyx1p/image/upload/v1784010710/banner_perf04.webp"
                 alt="Hardware & Tech Training Equipment"
-                className="w-full h-auto object-contain opacity-95 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform lg:-translate-x-8 lg:translate-y-16 xl:translate-y-24"
+                className="w-full max-w-[800px] h-auto lg:h-[600px] object-contain opacity-95 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform md:translate-y-12 lg:-translate-x-8 lg:translate-y-16 xl:translate-y-24"
               />
             </div>
           </div>
