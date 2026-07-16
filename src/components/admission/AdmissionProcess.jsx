@@ -70,7 +70,7 @@ export default function AdmissionProcess() {
                   <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-4xl border-2 transition-colors duration-300 ${getColorClasses(item.color)}`}>
                     {item.icon}
                   </div>
-                  <span className="text-5xl font-black text-slate-100 group-hover:text-slate-200 transition-colors">
+                  <span className="text-5xl font-black text-slate-300 group-hover:text-slate-800 transition-colors">
                     {item.step}
                   </span>
                 </div>

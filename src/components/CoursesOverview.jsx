@@ -35,8 +35,11 @@ export default function CoursesOverview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="text-blue-900 font-bold tracking-wider uppercase text-sm mb-4 block">GURUKUL JYOTI I.T.I TECHNICAL & PROFESSIONAL COURSES :</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight uppercase leading-tight">MOBILE & LAPTOP HARDWARE / SOFTWARE REPAIRING COURSE</h2>
+            <span className="text-blue-900 font-bold tracking-wider text-sm mb-4 block">Gurukul Jyoti I.T.I Technical & Professional Courses :</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-6 tracking-tight">
+              Mobile & Laptop Hardware <br className="hidden sm:block" />
+              / <span className="text-blue-900">Software Repairing Course</span>
+            </h2>
           </div>
           <Link href="/courses" className="group shrink-0 inline-flex items-center gap-3 bg-[#191313] text-white px-8 py-4 rounded-full font-semibold hover:bg-black transition-all duration-300 shadow-lg">
             Explore All <FaArrowRight className="group-hover:translate-x-1 transition-transform" />

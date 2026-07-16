@@ -151,9 +151,8 @@ export default function History() {
               <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-blue-900 tracking-tight leading-[1.1]">
                 {/* Mobile & Desktop View */}
                 <span className="md:hidden lg:inline">
-                  Institute<br />
-                  History &amp;<br />
-                  Timeline
+                  Institute History<br />
+                  &amp;  Timeline
                 </span>
                 {/* Tablet View */}
                 <span className="hidden md:inline lg:hidden">
@@ -327,7 +326,8 @@ export default function History() {
         </div>
       </div>
 
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes float {
           0%, 100% {
             transform: translateY(0) translateX(0);

@@ -3,7 +3,7 @@ import {
   FaCode, FaBullhorn, FaPaintBrush, 
   FaDatabase, FaShieldAlt, FaServer,
   FaClock, FaGraduationCap, FaBriefcase, FaArrowRight,
-  FaMobileAlt, FaLaptop, FaCalculator, FaDesktop, FaFileInvoiceDollar, FaFileExcel, FaMicrophone, FaTools, FaMicrochip, FaHardHat
+  FaMobileAlt, FaLaptop, FaCalculator, FaDesktop, FaFileInvoiceDollar, FaFileExcel, FaMicrophone, FaTools, FaMicrochip, FaHardHat, FaShoppingCart
 } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -62,7 +62,7 @@ export default function CourseList() {
       opportunities: ["Accountant", "Finance Executive"],
       icon: <FaCalculator />,
       theme: "rose",
-      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop"
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784116726/adfaa_otdaet.jpg"
     },
     {
       id: 6,
@@ -195,6 +195,39 @@ export default function CourseList() {
       icon: <FaDesktop />,
       theme: "pink",
       image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023060/ITI_COPA_y82neh.avif"
+    },
+    {
+      id: 18,
+      name: "Java Script",
+      duration: "3 Months",
+      eligibility: "12th Pass",
+      description: "Master modern web development with a comprehensive curriculum covering algorithms, scripting fundamentals, and DOM manipulation.",
+      opportunities: ["Web Developer", "Frontend Engineer"],
+      icon: <FaCode />,
+      theme: "blue",
+      image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      id: 19,
+      name: "Smart Accounting",
+      duration: "3 Months",
+      eligibility: "12th Pass",
+      description: "Learn comprehensive accounting principles and digital tools. Master everything from voucher entries to advanced Tally features.",
+      opportunities: ["Accountant", "Finance Executive"],
+      icon: <FaCalculator />,
+      theme: "orange",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2072&auto=format&fit=crop"
+    },
+    {
+      id: 20,
+      name: "E-Commerce",
+      duration: "2 Months",
+      eligibility: "12th Pass",
+      description: "Dive into the world of digital business. Understand online catalogues, payment gateways, and e-commerce infrastructure.",
+      opportunities: ["E-Commerce Manager", "Digital Marketer"],
+      icon: <FaShoppingCart />,
+      theme: "purple",
+      image: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784018605/e-commerce_wttmci.jpg"
     }
   ];
 

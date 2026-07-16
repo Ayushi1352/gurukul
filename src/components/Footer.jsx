@@ -67,7 +67,17 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>&copy; {new Date().getFullYear()} Gurukul Jyoti I.T.I. All Rights Reserved.</p>
-         
+          <p>
+            IT Partner:{' '}
+            <a 
+              href="https://www.kusheldigi.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
+            >
+              Kushel Digi Solutions
+            </a>
+          </p>
         </div>
       </div>
     </footer>

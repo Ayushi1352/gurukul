@@ -56,10 +56,58 @@ const courseDetails = {
     description: "Comprehensive training to become a skilled Laptop Hardware & Software engineer. Cover all brands and operating systems.",
     opportunities: ["Laptop Engineer", "IT Support", "Hardware Specialist"],
     modules: [
-      { title: "Module 1: Laptop Anatomy", topics: ["Identifying Components", "Disassembling Laptops", "Keyboard & Panel Replacement"] },
-      { title: "Module 2: Hardware Upgrades", topics: ["RAM & SSD Upgrades", "Hinge & Body Repair", "Cooling System Service"] },
-      { title: "Module 3: Software Installation", topics: ["Windows & Linux OS", "Drivers & Utilities", "Virus Removal"] },
-      { title: "Module 4: Basic Troubleshooting", topics: ["No Display Issues", "Power Issues", "Wi-Fi & Bluetooth Fixes"] }
+      {
+        title: "Module 1: Fundamentals of Electronics",
+        topics: [
+          "Basic Electrical Concepts: Understanding voltage, current, resistance, and different types of components like resistors, capacitors, inductors, and diodes.",
+          "SMT Electronics Introduction: Familiarity with surface-mount technology (SMT) components, which are commonly used in laptops.",
+          "Digital Electronics: Introduction to logic gates, digital circuits, and their applications in laptops."
+        ]
+      },
+      {
+        title: "Module 2: Laptop Hardware",
+        topics: [
+          "Laptop Components: Identifying and understanding the function of various parts like the motherboard, CPU, RAM, hard drive, SSD, display, keyboard, touchpad, power adapter, and battery.",
+          "Motherboard Basics: Understanding the structure and function of the motherboard.",
+          "Laptop Motherboard Power Sequence: Learning about the different power stages on the motherboard and how they work."
+        ]
+      },
+      {
+        title: "Module 3: Software Aspects",
+        topics: [
+          "Operating System (OS) Installation: Understanding how to install and configure different operating systems on laptops.",
+          "Drivers: Learning how to install and configure drivers for various hardware components.",
+          "Troubleshooting: Identifying and resolving software-related issues and system failures.",
+          "Data Recovery: Understanding the basics of data recovery and how to restore data from damaged hard drives or SSDs."
+        ]
+      },
+      {
+        title: "Module 4: Repairing Techniques",
+        topics: [
+          "Laptop Disassembly and Reassembly: Learning how to disassemble and reassemble different types of laptops.",
+          "Soldering Techniques: Practicing soldering and desoldering techniques, including BGA (ball grid array) and SMD (surface mount device) components.",
+          "Chip-Level Repair: Learning how to repair and troubleshoot chip-level faults on the motherboard.",
+          "Testing and Repairing Tools: Becoming familiar with different testing tools like a multimeter, oscilloscope and logic analyzer."
+        ]
+      },
+      {
+        title: "Module 5: Advanced Topic",
+        topics: [
+          "Circuit Tracing: Learning how to trace circuits on the motherboard using schematics and other resources.",
+          "BIOS Programming: Understanding BIOS and how to program it.",
+          "Adapter and Battery Repair: Learning how to troubleshoot and repair power adapters and batteries.",
+          "Display Repair: Understanding how to diagnose and repair display issues, including LCD/LED panels and inverters.",
+          "Keyboard and Touchpad Repair: Learning how to diagnose and repair keyboard and touchpad issues."
+        ]
+      },
+      {
+        title: "Practical Training",
+        topics: [
+          "Hands-on Practice: Gaining practical experience by working on real laptops and performing repairs under the guidance of experienced instructors.",
+          "Case Studies: Analyzing and resolving common laptop repair scenarios.",
+          "Troubleshooting and Fault Finding: Learning how to diagnose and troubleshoot various laptop issues."
+        ]
+      }
     ],
     theme: "emerald",
     heroImage: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=2070&auto=format&fit=crop"
@@ -77,7 +125,7 @@ const courseDetails = {
       { title: "Module 4: Advanced Tools", topics: ["Advance Excel for Finance", "Payroll Management", "Audit Preparation"] }
     ],
     theme: "rose",
-    heroImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop"
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784116726/adfaa_otdaet.jpg"
   },
   "computer-basic": {
     name: "Computer Basic",
@@ -296,13 +344,174 @@ const courseDetails = {
     description: "Learn computer hardware basics, software installation, data entry, basic programming, and office automation tools.",
     opportunities: ["Computer Operator", "Data Entry Operator", "Lab Assistant"],
     modules: [
-      { title: "Module 1: Computer Hardware & OS", topics: ["PC Assembly", "Windows & Linux Setup", "Basic Networking"] },
-      { title: "Module 2: Office Automation", topics: ["Word Processing", "Spreadsheets", "Presentations"] },
-      { title: "Module 3: Database & Programming", topics: ["MS Access Basics", "JavaScript Fundamentals", "VBA Basics"] },
-      { title: "Module 4: Internet & Web Design", topics: ["HTML/CSS Basics", "Web Surfing & Security", "E-Commerce Basics"] }
+      {
+        title: "Introduction to Computers and Windows Operating System",
+        topics: [
+          "History, Generations, Types, Advantages and Applications of Computers.",
+          "Concepts of Hardware and Software. Basics of Computer Hardware.",
+          "Introduction to Various Processors.",
+          "Introduction to the Functions of an Operating Systems in Use.",
+          "Main features of Windows O.S.",
+          "Various Input/Output Devices in Use and their Features.",
+          "Using Scanner, Printer and Webcam."
+        ]
+      },
+      {
+        title: "Computer Hardware Basics and Software Installation",
+        topics: [
+          "Introduction to the Booting Process, BIOS Setting and their Modification.",
+          "Introduction to Various Types of Memories and their Features.",
+          "Basic Hardware and Software Issues and their Solutions.",
+          "Formatting and Loading of OS and Application Software and Antivirus."
+        ]
+      },
+      {
+        title: "Word Processing",
+        topics: [
+          "Introduction to the Various Applications of Office.",
+          "Introduction to Word Features, Office Button, Toolbars.",
+          "Creating, Saving Formatting and Printing Documents Using Word.",
+          "Working with Inserting Objects, Macro, Mail Merge, Templates and other Tools in Word.",
+          "Page Setup and Printing Documents Using word."
+        ]
+      },
+      {
+        title: "Spread Sheet Application",
+        topics: [
+          "Introduction to excel features and Data Types.",
+          "Cell Referencing, Use of Functions in all Categories, Linking Sheets.",
+          "Introduction to Various Functions in all Categories of Excel.",
+          "Concepts of Sorting, Filtering and Validating Data.",
+          "Analyzing Data Using Charts, Data Tables, Pivot Tables, Goal Seeking and scenarios.",
+          "Introduction to Reporting."
+        ]
+      },
+      {
+        title: "Image Editing, Creating Presentation and Using Open Office",
+        topics: [
+          "Introduction to Open Office.",
+          "Introduction to the Properties and Editing of Images.",
+          "Introduction to PowerPoint and its Advantages.",
+          "Creating Slide Shows.",
+          "Fine Tuning the Presentation and Good Presentation Techniques.",
+          "Introduction to Macros, Designer Objects Controls, their Properties and Behavior."
+        ]
+      },
+      {
+        title: "Internet Concepts",
+        topics: [
+          "Introduction to WWW, Concept of Internet, Web Browsers, Internet Servers and Search Engines.",
+          "Concept of Domain Naming System and E-mail Communication.",
+          "Introduction to video chatting Tools, VoIP and Social Networking Concept.",
+          "Concept of Cloud Storage and Open Web Server.",
+          "Introduction to Internet Security, Threats and Attacks, Malicious Software Types, Internet Security Products and their Advantages."
+        ]
+      }
     ],
     theme: "pink",
     heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784023060/ITI_COPA_y82neh.avif"
+  },
+  "java-script": {
+    name: "Java Script",
+    duration: "3 Months",
+    eligibility: "12th Pass",
+    description: "Master modern web development with a comprehensive curriculum covering algorithms, scripting fundamentals, and DOM manipulation.",
+    opportunities: ["Web Developer", "Frontend Engineer"],
+    modules: [
+      { 
+        title: "Module 1: Introduction & Basics", 
+        topics: [
+          "Algorithm and Flowcharts.",
+          "Introduction to web Servers and their features.",
+          "Introduction to Java Script and its Application for the Web.",
+          "Introduction to Programming and Scripting Languages."
+        ] 
+      },
+      { 
+        title: "Module 2: Core Concepts", 
+        topics: [
+          "Java scripts Basics-Data types, Variables, Constants. Conversion between Data Types.",
+          "The Arithmetic, Comparison, Logical and String Operators in Java Script. Operator Precedence.",
+          "Arrays in Java Script- Concepts, Types and Usage.",
+          "Program Control Statements and Loops in Java Script."
+        ] 
+      },
+      { 
+        title: "Module 3: Advanced Topics", 
+        topics: [
+          "Introduction to Functions in Java Script. Built in Java Script Functions Overview.",
+          "The String Data Type in Java Script. Introduction to String Math and Data Functions.",
+          "Concepts of Pop Up boxes in Java script.",
+          "Introduction to the Document Object Model."
+        ] 
+      }
+    ],
+    theme: "blue",
+    heroImage: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop"
+  },
+  "smart-accounting": {
+    name: "Smart Accounting",
+    duration: "3 Months",
+    eligibility: "12th Pass",
+    description: "Learn comprehensive accounting principles and digital tools. Master everything from voucher entries to advanced Tally features.",
+    opportunities: ["Accountant", "Finance Executive"],
+    modules: [
+      { 
+        title: "Module 1: Accounting Fundamentals", 
+        topics: [
+          "Basics of Accounting, Golden Rules of Accounting, Voucher Entry, Ledger Posting, Final Accounts Preparation.",
+          "Cash Book, Ratio Analysis, Depreciation, Stock Management.",
+          "Analysis of VAT, Cash Flow, Fund Flow Accounting."
+        ] 
+      },
+      { 
+        title: "Module 2: Tally Implementation", 
+        topics: [
+          "Introduction to Tally, Features and Advantages.",
+          "Implementing Accounts in Tally.",
+          "Double Entry System of Bookkeeping."
+        ] 
+      },
+      { 
+        title: "Module 3: Advanced Management & Analysis", 
+        topics: [
+          "Budgeting System, Scenario Management and Variance Analysis.",
+          "Costing System, Concept of Ratios, Analysis of Financial Statements, Inventory Basics, POS Invoicing, TDS, TCS, FBT, VAT and Service Tax Processing in Tally.",
+          "Tally Interface in Different Languages."
+        ] 
+      }
+    ],
+    theme: "orange",
+    heroImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2072&auto=format&fit=crop"
+  },
+  "e-commerce": {
+    name: "E-Commerce",
+    duration: "2 Months",
+    eligibility: "12th Pass",
+    description: "Dive into the world of digital business. Understand online catalogues, payment gateways, and e-commerce infrastructure.",
+    opportunities: ["E-Commerce Manager", "Digital Marketer"],
+    modules: [
+      { 
+        title: "Module 1: Fundamentals of E-Commerce", 
+        topics: [
+          "Definition of E-Commerce Types Scope and Benefits of E-commerce.",
+          "Difference Between E-commerce and Traditional Commerce.",
+          "Capabilities Requirements and Technology issues for E commerce.",
+          "Types of E-commerce Websites. Building Business on the Net."
+        ] 
+      },
+      { 
+        title: "Module 2: Processing & Security", 
+        topics: [
+          "Concept of Online Catalogues, Shopping Carts, Checkout Pages.",
+          "Payment and Order Processing.",
+          "Authorization, Charge Back and Other Payment Methods.",
+          "Security Issues and Payment Gateways."
+        ] 
+      }
+    ],
+    theme: "purple",
+    heroImage: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784018605/e-commerce_wttmci.jpg"
   }
 };
 

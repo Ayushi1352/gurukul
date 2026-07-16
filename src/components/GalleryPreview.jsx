@@ -4,16 +4,16 @@ import { FaPlayCircle } from 'react-icons/fa';
 
 export default function GalleryPreview() {
   const media = [
-    { type: 'image', src: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784028200/image5_rywv4l.avif", span: "md:col-span-2 md:row-span-2" },
+    { type: 'image', src: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784115578/campus_usseup.jpg", span: "md:col-span-2 md:row-span-2" },
     { type: 'image', src: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784028201/image2_aanjtq.webp", span: "md:col-span-1 md:row-span-1" },
-    { type: 'image', src: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784028200/image4_qmtct3.avif", span: "md:col-span-1 md:row-span-1" },
-    { type: 'image', src: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784028201/image1_iqy7i4.webp", span: "md:col-span-2 md:row-span-1" },
+    { type: 'image', src: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784115730/labs_wqwzfk.jpg", span: "md:col-span-1 md:row-span-1" },
+    { type: 'image', src: "https://res.cloudinary.com/w4kwyx1p/image/upload/v1784115575/computer_lab_pc3wj6.jpg", span: "md:col-span-2 md:row-span-1" },
   ];
 
   return (
     <section className="py-24 bg-slate-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">Inside Gurukul Jyoti I.T.I</span>
