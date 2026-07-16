@@ -146,7 +146,7 @@ export default function History() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center justify-center lg:justify-end">
+          <div className="flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
             <div className="text-center lg:text-right max-w-md">
               <h2 className="text-[2.5rem] md:text-[3.5rem] font-semibold text-blue-900 tracking-tight leading-[1.1]">
                 {/* Mobile & Desktop View */}
